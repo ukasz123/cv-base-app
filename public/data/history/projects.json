@@ -1,0 +1,34 @@
+{
+  "projects": [
+    {
+      "code": "Current",
+      "name": "<Current project name>",
+      "from": "2018-06",
+      "skillsUsed": [
+        "android",
+        "java"
+      ]
+    },
+    {
+      "code": "ProjectCode",
+      "name": "<Project name>",
+      "from": "2018-04",
+      "to": "2018-05",
+      "skillsUsed": [
+        "flutter",
+        "dart",
+        "android",
+        "ios"
+      ]
+    },
+    {
+      "code": "ProjectWithoutDescription",
+      "name": "<Project name>",
+      "from": "2018-03",
+      "to": "2018-03",
+      "skillsUsed": [
+        "kotlin"
+      ]
+    }
+  ]
+}

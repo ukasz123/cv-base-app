@@ -1,0 +1,58 @@
+.techs b {
+	font-size: 1.0rem;
+	margin-right: 0.4rem;
+}
+
+@media only screen and (min-width: 601px){
+    .techs b {
+	    font-size: 1.2rem;
+	    margin-right: 0.6rem;
+    }
+}
+
+#tableOfContents {
+    width: 20%;
+}
+
+.table-of-contents li ul {
+	list-style-type: none;
+}
+
+.table-of-contents li ul li {
+	margin-left: 1rem;
+}
+
+.block {
+	height: 100%;
+}
+
+.cv-title {
+	font-size: 1.4rem;
+}
+.h2 {
+	font-size: 3.56rem !important;
+    line-height: 110% !important;
+    margin: 1.78rem 0 1.424rem 0;
+}
+
+.cv-skills-carousel {
+	max-height:320px !important;
+}
+.cv-skills-carousel .carousel-item{
+	min-height: 320px !important;
+}
+
+.cv-skills-carousel .container {
+	height: 260px;
+}
+
+@media only screen and (min-width: 601px){
+    .fullHeight {
+	    min-height: 100vh;
+    }
+}
+.pointer {cursor: pointer;}
+
+.push-down {
+    margin-top: 25vh;
+}

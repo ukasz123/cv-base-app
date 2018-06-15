@@ -1,0 +1,12 @@
+{
+  "hobbies":[
+    {
+      "name": "Skiing",
+      "iconCode": "skiing"
+    },
+    {
+      "name": "Fantasy",
+      "iconCode": "reading"
+    }
+  ]
+}

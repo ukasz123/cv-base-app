@@ -1,0 +1,105 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?8knw8h');
+  src:  url('fonts/icomoon.eot?8knw8h#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?8knw8h') format('truetype'),
+    url('fonts/icomoon.woff?8knw8h') format('woff'),
+    url('fonts/icomoon.svg?8knw8h#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-tech-css3:before {
+  content: "\e901";
+}
+.icon-tech-git:before {
+  content: "\e902";
+}
+.icon-tech-gradle:before {
+  content: "\e903";
+}
+.icon-tech-cplusplus:before {
+  content: "\e904";
+}
+.icon-tech-angular:before {
+  content: "\e905";
+}
+.icon-tech-bootstrap:before {
+  content: "\e906";
+}
+.icon-tech-java:before {
+  content: "\e907";
+}
+.icon-tech-android:before {
+  content: "\e908";
+}
+.icon-tech-flutter:before {
+  content: "\e915";
+}
+.icon-tech-xamarin:before {
+  content: "\e91a";
+}
+.icon-tech-script:before {
+  content: "\e90c";
+}
+.icon-tech-nodejs:before {
+  content: "\e90d";
+  color: #83cd29;
+}
+.icon-tech-jquery:before {
+  content: "\e910";
+}
+.icon-tech-shell:before {
+  content: "\e911";
+}
+.icon-tech-dart:before {
+  content: "\e912";
+}
+.icon-tech-python:before {
+  content: "\e913";
+}
+.icon-tech-sqlite:before {
+  content: "\e914";
+}
+.icon-tech-rxjava:before {
+  content: "\e90b";
+}
+.icon-tech-javascript:before {
+  content: "\e90a";
+}
+.icon-tech-html5:before {
+  content: "\e909";
+}
+.icon-tech-maven:before {
+  content: "\e90e";
+}
+.icon-tech-svg:before {
+  content: "\e90f";
+}
+.icon-tech-kotlin:before {
+  content: "\e900";
+}
+.icon-tech-xml:before {
+  content: "\ea80";
+}
+.icon-tech-google:before {
+  content: "\ea88";
+}
+.icon-tech-ios:before {
+  content: "\eabe";
+}

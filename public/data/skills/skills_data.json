@@ -1,0 +1,34 @@
+{
+  "skills": [
+    {
+      "name": "Kotlin",
+      "primary": true,
+      "icon": "kotlin",
+      "level": 8
+    },
+    {
+      "name": "Git",
+      "primary": true,
+      "icon": "git",
+      "level": 4
+    },
+    {
+      "name": "Python",
+      "primary": false,
+      "icon": "python",
+      "level": 2
+    },
+    {
+      "name": "SQLite",
+      "primary": false,
+      "icon": "sqlite",
+      "level": 4
+    },
+    {
+      "name": "Linux",
+      "primary": false,
+      "level": 3
+    }
+
+  ]
+}

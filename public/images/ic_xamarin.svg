@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="75"
+   height="69"
+   viewBox="0 0 75 69"
+   version="1.1"
+   id="svg10"
+   sodipodi:docname="ic_xamarin.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
+  <metadata
+     id="metadata16">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Xamarin</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs14" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     id="namedview12"
+     showgrid="false"
+     inkscape:zoom="3.4202899"
+     inkscape:cx="16.887712"
+     inkscape:cy="34.5"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g8" />
+  <title
+     id="title2">Xamarin</title>
+  <g
+     id="g8"
+     style="fill:none;fill-rule:evenodd">
+    <path
+       d="M 21.64,0 C 19.615,0.005 17.632,1.152 16.612,2.902 L 0.752,30.39 c -1.003,1.755 -1.003,4.049 0,5.803 l 15.86,27.489 c 1.02,1.75 3.003,2.897 5.029,2.901 H 53.36 c 2.025,-0.004 4.008,-1.151 5.028,-2.901 l 15.86,-27.489 c 1.003,-1.754 1.003,-4.048 0,-5.803 L 58.387,2.902 C 57.368,1.152 55.385,0.004 53.36,0 Z m 0.288,16.081 a 0.63,0.63 0 0 1 0.133,0 h 5.471 a 0.72,0.72 0 0 1 0.598,0.354 l 9.281,16.502 a 0.71,0.71 0 0 1 0.089,0.266 0.71,0.71 0 0 1 0.088,-0.266 l 9.259,-16.502 a 0.724,0.724 0 0 1 0.62,-0.354 h 5.47 c 0.485,0.005 0.848,0.613 0.621,1.041 l -9.06,16.17 9.06,16.147 c 0.249,0.43 -0.123,1.068 -0.62,1.063 h -5.471 a 0.724,0.724 0 0 1 -0.62,-0.376 L 37.587,33.624 A 0.71,0.71 0 0 1 37.5,33.358 0.71,0.71 0 0 1 37.411,33.624 l -9.28,16.502 a 0.723,0.723 0 0 1 -0.599,0.376 h -5.47 c -0.498,0.005 -0.87,-0.632 -0.62,-1.063 L 30.5,33.292 21.44,17.122 c -0.217,-0.39 0.048,-0.958 0.487,-1.041 z"
+       id="path6"
+       inkscape:connector-curvature="0"
+       style="display:inline;fill:#000000;fill-opacity:1" />
+  </g>
+</svg>
