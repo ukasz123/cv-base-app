@@ -1,8 +1,9 @@
 Open Sources:
- * Avatar icon made by [Freepik](http://www.freepik.com) from [https://www.flaticon.com](https://www.flaticon.com/) is licensed by [Creative Commons BY 3.0](http://creativecommons.org/licenses/by/3.0/)
- * [Materialize](https://materializecss.com) framework
- * Social and tech font glyphs were build with the help of [Icomoon](https://icomoon.io/)
- * Other font glyph packs comes from [Mfizz](http://fizzed.com/oss/font-mfizz) and [Fort Awesome](https://fortawesome.com)
+
+* Avatar icon made by [Freepik](http://www.freepik.com) from [https://www.flaticon.com](https://www.flaticon.com/) is licensed by [Creative Commons BY 3.0](http://creativecommons.org/licenses/by/3.0/)
+* [Materialize](https://materializecss.com) framework
+* Social and tech font glyphs were build with the help of [Icomoon](https://icomoon.io/)
+* Other font glyph packs comes from [Mfizz](http://fizzed.com/oss/font-mfizz) and [Fort Awesome](https://fortawesome.com)
 
 Original README.md below
 ---
