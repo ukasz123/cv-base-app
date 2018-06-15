@@ -1,0 +1,4 @@
+{
+  "title": "Activate Point-Of-Sale",
+  "description": "Aplikacja typu point-of-sale.\nNajważniejsze funkcje:\n *możliwość współpracy z różnymi urządzeniami peryferyjnymi w rodzaju skanerów kodów paskowych lub terminali płatniczych,\n *zarządzanie menu różnych punktów sprzedaży w ramach jednego miejsca widowiskowego,\n *obsługa płatności offline.\nW ramach projektu tworzyłem m.in. bibliotekę do dzielenia się danymi między urządzeniami w tej samej sieci przy wykorzystaniu protokołu Bonjour i bazy Couchbase."
+}

@@ -8,7 +8,7 @@ fun RBuilder.copyrights() =
         div("Copyrights") {
             contentPadding(classes = null) {
                 span("white-text") {
-                    +"Created by Łukasz Huculak"
+                    +"Copyrights © 2018 by Łukasz Huculak"
                 }
             }
         }

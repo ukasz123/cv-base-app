@@ -1,16 +1,52 @@
 {
   "skills": [
     {
+      "name": "Android",
+      "primary": true,
+      "icon": "android",
+      "level": 8
+    },
+    {
+      "name": "Java",
+      "primary": true,
+      "icon": "java",
+      "level": 7
+    },
+    {
       "name": "Kotlin",
       "primary": true,
       "icon": "kotlin",
       "level": 8
     },
     {
+      "name": "Gradle",
+      "primary": true,
+      "icon": "gradle",
+      "level": 4
+    },
+    {
       "name": "Git",
       "primary": true,
       "icon": "git",
       "level": 4
+    },
+    {
+      "name": "RxJava",
+      "primary": true,
+      "icon": "rxjava",
+      "level": 8
+    },
+    {
+      "name": "Dart",
+      "primary": true,
+      "icon": "dart",
+      "level": 6
+    },
+    {
+      "name": "Flutter",
+      "primary": true,
+      "icon": "flutter",
+      "level": 6
     },
     {
       "name": "Python",
@@ -25,9 +61,25 @@
       "level": 4
     },
     {
+      "name": "Realm",
+      "primary": false,
+      "level": 5
+    },
+    {
+      "name": "Couchbase",
+      "primary": false,
+      "level": 4
+    },
+    {
       "name": "Linux",
       "primary": false,
       "level": 3
+    },
+    {
+      "name": "Xamarin",
+      "primary": false,
+      "level": 2,
+      "icon": "xamarin"
     }
 
   ]

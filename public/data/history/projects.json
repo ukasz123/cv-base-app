@@ -1,17 +1,18 @@
 {
   "projects": [
     {
-      "code": "Current",
-      "name": "<Current project name>",
+      "code": "Fyber",
+      "name": "Fyber SDK",
       "from": "2018-06",
       "skillsUsed": [
         "android",
-        "java"
+        "java",
+        "git"
       ]
     },
     {
-      "code": "ProjectCode",
-      "name": "<Project name>",
+      "code": "LearningFlutter",
+      "name": "Learning Flutter",
       "from": "2018-04",
       "to": "2018-05",
       "skillsUsed": [
@@ -22,12 +23,133 @@
       ]
     },
     {
-      "code": "ProjectWithoutDescription",
-      "name": "<Project name>",
+      "code": "engelCARD",
+      "name": "engelCARD",
       "from": "2018-03",
       "to": "2018-03",
       "skillsUsed": [
-        "kotlin"
+        "android",
+        "kotlin",
+        "rxjava",
+        "git"
+      ]
+    },
+    {
+      "code": "Gamification",
+      "name": "Codete Gamification",
+      "from": "2018-02",
+      "to": "2018-02",
+      "skillsUsed": ["xamarin"]
+    },
+    {
+      "code": "Jodel",
+      "name": "Jodel",
+      "from": "2017-10",
+      "to": "2018-01",
+      "skillsUsed": [
+        "android",
+        "kotlin",
+        "rxjava",
+        "git",
+        "gradle"
+      ]
+    },
+    {
+      "code": "Activate",
+      "name": "Activate POS",
+      "from": "2017-02",
+      "to": "2017-09",
+      "skillsUsed": [
+        "android",
+        "kotlin",
+        "rxjava",
+        "git",
+        "gradle"
+      ]
+    },
+    {
+      "code": "Appetize",
+      "name": "Activate Mobile Ordering SDK",
+      "from": "2017-01",
+      "to": "2016-04",
+      "skillsUsed": [
+        "android",
+        "git",
+        "gradle"
+      ]
+    },
+    {
+      "code": "PTT",
+      "name": "Motorola Push-To-Talk",
+      "from": "2015-06",
+      "to": "2016-03",
+      "skillsUsed": [
+        "android",
+        "git",
+        "gradle",
+        "cplusplus"
+      ]
+    },
+    {
+      "code": "CSF",
+      "name": "Comarch Smart Finance",
+      "from": "2014-04",
+      "to": "2015-05",
+      "skillsUsed": [
+        "android",
+        "maven"
+      ]
+    },
+    {
+      "code": "AliorBLIK",
+      "name": "Alior BLIK",
+      "from": "2014-02",
+      "to": "2014-04",
+      "skillsUsed": [
+        "android",
+        "maven"
+      ]
+    },
+    {
+      "code": "BPA",
+      "name": "Banque Populaire des Alpes",
+      "from": "2013-10",
+      "to": "2014-02",
+      "skillsUsed": [
+        "java", "angular", "javascript", "html5", "bootstrap"
+      ]
+    },
+    {
+      "code": "CSF-RD",
+      "name": "Comarch Smart Finance (R&D)",
+      "from": "2013-05",
+      "to": "2013-09",
+      "skillsUsed": [
+        "android",
+        "maven",
+        "java",
+        "google"
+      ]
+    },
+    {
+      "code": "BNP",
+      "name": "BNP Paribas Mobile Pl@anet",
+      "from": "2012-12",
+      "to": "2013-04",
+      "skillsUsed": [
+        "android",
+        "maven",
+        "java"
+      ]
+    },
+    {
+      "code": "Alior",
+      "name": "Alior Mobile Banking",
+      "from": "2012-08",
+      "to": "2012-12",
+      "skillsUsed": [
+        "android",
+        "maven"
       ]
     }
   ]

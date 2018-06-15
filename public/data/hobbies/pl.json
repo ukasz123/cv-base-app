@@ -7,6 +7,22 @@
     {
       "name": "Fantastyka",
       "iconCode": "reading"
+    },
+    {
+      "name": "Fantastyka naukowa",
+      "iconCode": "reading"
+    },
+    {
+      "name": "Kryminały",
+      "iconCode": "reading"
+    },
+    {
+      "name": "Gry planszowe",
+      "iconCode": "dice"
+    },
+    {
+      "name": "Gry komputerowe",
+      "iconCode": "game"
     }
   ]
 }
