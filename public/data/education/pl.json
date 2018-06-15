@@ -1,8 +1,13 @@
 {
   "college_studies": [
     {
-      "title": "<Faculty name>",
-      "period": "<Period>"
+      "title": "Studia na kierunku Zarządzanie na Wydziale Zarządzania AGH",
+      "period": "2006-2011"
+    },
+    {
+      "title": "Studia na kierunku Informatyka na Wydziale Elektrotechniki, Automatyki, Informatyki i Elektroniki AGH",
+      "period": "2001-2006"
     }
-  ]
+  ],
+  "courses": []
 }

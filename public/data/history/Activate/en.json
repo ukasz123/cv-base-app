@@ -1,0 +1,4 @@
+{
+  "title": "Activate Point-Of-Sale",
+  "description": "A point-of-sale application.\nKey features:\n *cooperation with various peripheral devices such as barcode scanners or payment terminals,\n *management of a menu of different sales outlets within a single vendor,\n *offline payment processing.\nDuring the project, among other things, I created a library to share data between devices in the same network using Bonjour protocol and the Couchbase database."
+}

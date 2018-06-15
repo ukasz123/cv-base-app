@@ -1,0 +1,4 @@
+{
+  "title": "Nauka Fluttera",
+  "description": "W trakcie tego okresu miałem okazję stworzyć kilka wewnętrznych aplikacji w celu zweryfikowania, czy Flutter jest platformą pozwalającą na tworzenie aplikacji mobilnych na wiele platform.\nW ramach nauki stworzyłem aplikacje:\n * Codete Survey App - aplikacja do zbierania danych osobowych na konferencjach,\n * Water Tracker - nietypowy interfejs użytkownika,\n * Tetris - wspólny kod logiki biznesowej dzielony między aplikację webową i Fluttera"
+}

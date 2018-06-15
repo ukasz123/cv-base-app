@@ -7,6 +7,22 @@
     {
       "name": "Fantasy",
       "iconCode": "reading"
+    },
+    {
+      "name": "Science-fiction",
+      "iconCode": "reading"
+    },
+    {
+      "name": "Detective stories",
+      "iconCode": "reading"
+    },
+    {
+      "name": "Board games",
+      "iconCode": "dice"
+    },
+    {
+      "name": "Computer games",
+      "iconCode": "game"
     }
   ]
 }

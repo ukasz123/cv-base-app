@@ -1,8 +1,13 @@
 {
   "college_studies": [
     {
-      "title": "<Faculty name>",
-      "period": "<Period>"
+      "title": "Management at the Faculty of Management AGH",
+      "period": "2006-2011"
+    },
+    {
+      "title": "Computer Science at the Faculty of Electrical Engineering, Automation, Computer Science and Electronics AGH",
+      "period": "2001-2006"
     }
-  ]
+  ],
+  "courses": []
 }

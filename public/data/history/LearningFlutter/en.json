@@ -1,0 +1,4 @@
+{
+  "title": "Learning Flutter",
+  "description": "During this period I had the opportunity to create several internal applications in order to verify whether Flutter is a good way to create mobile applications on multiple platforms.\nAs part of my training, I developed applications:\n *Codete Survey App - application for collecting personal data at conferences,\n *Water Tracker - a custom user interface,\n *Tetris - a common game logic code shared between the web and Flutter applications."
+}
