@@ -42,6 +42,7 @@ data class Project(
         val skillsUsed: Array<String>,
         val from: String,
         val to: String? = null,
+        val company: String? = null,
         private val translatedTitle: String? = null,
         private val translatedDescription: String? = null
 ) {
@@ -71,7 +72,8 @@ class WorkTimeline : RComponent<LanguageState, WorkTimelineState>() {
                                 name = it.name,
                                 to = it.to,
                                 from = it.from,
-                                skillsUsed = it.skillsUsed
+                                skillsUsed = it.skillsUsed,
+                                company = it.company
                         )
                     }.toList().toTypedArray()
             setState { projects = projectsCopy }
@@ -112,8 +114,13 @@ class WorkTimeline : RComponent<LanguageState, WorkTimelineState>() {
                     li("project " + (if (it.current) "project-current" else "")) {
                         setProp("id", it.code)
                         div("collapsible-header") {
-                            h5("col s8 l9") {
-                                +it.title
+                            div("col s8 l9") {
+                                h5{+it.title}
+                                it.company?.let {
+                                    span("Project-company-name") {
+                                        +it
+                                    }
+                                }
                             }
                             div("col s4 l3 valign-wrapper") {
                                 span("techs right-align") {
