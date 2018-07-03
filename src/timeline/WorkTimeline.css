@@ -3,3 +3,7 @@
     font-size: 1.2rem;
     font-weight: lighter;
 }
+.Project-company-name {
+    font-style: italic;
+    font-weight: 500;
+}
