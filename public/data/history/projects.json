@@ -8,7 +8,8 @@
         "android",
         "java",
         "git"
-      ]
+      ],
+      "company": "Codete"
     },
     {
       "code": "LearningFlutter",
@@ -20,7 +21,8 @@
         "dart",
         "android",
         "ios"
-      ]
+      ],
+      "company": "Codete"
     },
     {
       "code": "engelCARD",
@@ -32,14 +34,16 @@
         "kotlin",
         "rxjava",
         "git"
-      ]
+      ],
+      "company": "Codete"
     },
     {
       "code": "Gamification",
       "name": "Codete Gamification",
       "from": "2018-02",
       "to": "2018-02",
-      "skillsUsed": ["xamarin"]
+      "skillsUsed": ["xamarin"],
+      "company": "Codete"
     },
     {
       "code": "Jodel",
@@ -52,7 +56,8 @@
         "rxjava",
         "git",
         "gradle"
-      ]
+      ],
+      "company": "Codete"
     },
     {
       "code": "Activate",
@@ -65,7 +70,8 @@
         "rxjava",
         "git",
         "gradle"
-      ]
+      ],
+      "company": "Appdate"
     },
     {
       "code": "Appetize",
@@ -76,7 +82,8 @@
         "android",
         "git",
         "gradle"
-      ]
+      ],
+      "company": "Appdate"
     },
     {
       "code": "PTT",
@@ -88,7 +95,8 @@
         "git",
         "gradle",
         "cplusplus"
-      ]
+      ],
+      "company": "Motorola Solutions"
     },
     {
       "code": "CSF",
@@ -98,7 +106,8 @@
       "skillsUsed": [
         "android",
         "maven"
-      ]
+      ],
+      "company": "ComArch"
     },
     {
       "code": "AliorBLIK",
@@ -108,7 +117,8 @@
       "skillsUsed": [
         "android",
         "maven"
-      ]
+      ],
+      "company": "ComArch"
     },
     {
       "code": "BPA",
@@ -117,7 +127,8 @@
       "to": "2014-02",
       "skillsUsed": [
         "java", "angular", "javascript", "html5", "bootstrap"
-      ]
+      ],
+      "company": "ComArch"
     },
     {
       "code": "CSF-RD",
@@ -129,7 +140,8 @@
         "maven",
         "java",
         "google"
-      ]
+      ],
+      "company": "ComArch"
     },
     {
       "code": "BNP",
@@ -140,7 +152,8 @@
         "android",
         "maven",
         "java"
-      ]
+      ],
+      "company": "ComArch"
     },
     {
       "code": "Alior",
@@ -150,7 +163,8 @@
       "skillsUsed": [
         "android",
         "maven"
-      ]
+      ],
+      "company": "ComArch"
     }
   ]
 }
