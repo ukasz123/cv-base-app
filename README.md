@@ -1,3 +1,19 @@
+## Sync features instructions
+* Add non-default remote repository to the SourceTree 
+    * URL: git@bitbucket.org:ukasz123/cv-app-base.git
+    * name: cv-app-base
+* Create local branch for new feature merge
+* Merge release commit from cv-app-base to the new branch, ex. `1.0.1` to `project-company` and resolve conflicts
+* Add new data as required
+* Merge back to `master` (or do PR)
+
+## Build website instructions
+* Tag `master` branch with new version 
+* Run `npm run build`
+* Copy content of _build_ folder to the repository folder for [GitPages project](https://github.com/ukasz123/ukasz123.github.io) project
+* Commit changes to the `master` branch to GitPages project repository and add new `release_[version]` tag to it
+
+--- 
 Open Sources:
 
 * Avatar icon made by [Freepik](http://www.freepik.com) from [https://www.flaticon.com](https://www.flaticon.com/) is licensed by [Creative Commons BY 3.0](http://creativecommons.org/licenses/by/3.0/)
