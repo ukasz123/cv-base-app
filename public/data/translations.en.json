@@ -13,5 +13,7 @@
 	"now": "now",
 	"cvTitle": "<Your title>",
 	"social": "My Places",
-	"otherProjects": "Other projects"
+	"otherProjects": "Other projects",
+	"repositoryUrl": "Sources",
+	"seeMore": "See also"
 }

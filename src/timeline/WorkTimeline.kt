@@ -7,32 +7,8 @@ import react.RComponent
 import react.RState
 import react.dom.*
 import react.setState
+import skills.forCode
 
-enum class Skills(val code: String, val title: String) {
-    Android("android", "Android"),
-    Kotlin("kotlin", "Kotlin"),
-    RxJava("rxjava", "RxJava"),
-    Git("git", "Git"),
-    Gradle("gradle", "Gradle"),
-    CPP("cplusplus", "C++"),
-    Maven("maven", "Maven"),
-    Java("java", "Java"),
-    Angular("angular", "Angular"),
-    JavaScript("javascript", "JavaScript"),
-    HTML5("html5", "HTML"),
-    Bootstrap3("bootstrap", "Bootstrap 3"),
-    CSS("css", "CSS"),
-    Google("google", "Google APIs"),
-    Xamarin("xamarin", "Xamarin"),
-    Flutter("flutter", title = "Flutter"),
-    iOS("ios", title ="iOS"),
-    Dart(code = "dart", title = "Dart");
-
-}
-
-internal fun forCode(code: String): Skills? {
-    return Skills.values().find { it.code == code }
-}
 
 data class History(val projects: Array<Project>)
 
@@ -65,7 +41,7 @@ class WorkTimeline : RComponent<LanguageState, WorkTimelineState>() {
     override fun componentWillMount() {
         fetchDataFromJsonFile<History>("data/history/projects.json") {
             it.projects.sortByDescending { it.to ?: "9999-12" }
-            var projectsCopy = it.projects.asSequence()
+            val projectsCopy = it.projects.asSequence()
                     .map {
                         Project(
                                 code = it.code,
