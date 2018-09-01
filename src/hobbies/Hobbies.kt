@@ -8,6 +8,8 @@ import i18n.Translator
 import react.*
 import react.dom.div
 import react.dom.img
+import react.dom.li
+import react.dom.ul
 
 data class Hobbies (
     val hobbies: Array<Hobby>
@@ -37,9 +39,9 @@ class HobbiesComponent: RComponent<LanguageState, HobbiesState>(){
                 classes = "orange darken-1"
         ) {
             contentTitle(Translator.getTranslation("hobbies"))
-            div {
+            ul {
                 state.hobbies.forEach {
-                    div("chip") {
+                    li("chip") {
                         img(src = "images/ic_${it.iconCode}.svg"){}
                         +it.name
                     }

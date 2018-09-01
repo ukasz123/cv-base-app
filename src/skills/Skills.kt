@@ -71,11 +71,11 @@ internal class SkillsSection : RComponent<LanguageState, SkillsState>() {
 private fun RBuilder.skillsCarouselItem(skillsPage: List<List<Skill>>, blockClass: String? = null): ReactElement {
     return div("container") {
         skillsPage.forEach {
-            div("row valign-wrapper " + (blockClass ?: "")) {
+            ul("row valign-wrapper " + (blockClass ?: "")) {
                 val colSize = 12 / it.size
                 it.forEach {
                     val bigIcons = it.primary
-                    div("col s$colSize") {
+                    li("col s$colSize") {
                         it.icon?.let {
                             val icon = fun RDOMBuilder<Tag>.() {
                                 i("icon-tech-$it") {}

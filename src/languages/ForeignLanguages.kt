@@ -5,9 +5,7 @@ import i18n.Translator
 import react.RBuilder
 import react.RComponent
 import react.RState
-import react.dom.div
-import react.dom.p
-import react.dom.span
+import react.dom.*
 import react.setState
 
 data class LanguageData(
@@ -43,9 +41,10 @@ class ForeignLanguages: RComponent<LanguageState, ForeignLanguagesState>(){
                 classes = "teal darken-1"
         ){
             contentTitle(Translator.getTranslation("foreignLanguages"))
+            ul{
             state.languageData?.known.forEachIndexed { index, language ->
                 val colorClass = colorsPalette[index % colorsPaletteSize]
-                div("card $colorClass") {
+                li("card $colorClass") {
                     div("card-content white-text") {
                         span("card-title") {
                             +language.name
@@ -56,7 +55,7 @@ class ForeignLanguages: RComponent<LanguageState, ForeignLanguagesState>(){
                     }
                 }
             }
-        }
+        }}
     }
 
 }
