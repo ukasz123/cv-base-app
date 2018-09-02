@@ -48,7 +48,8 @@ class App : RComponent<RProps, LanguageState>() {
                            arrayOf<Pair<String, () -> Unit>>(
                                    Pair("pl", { selectLanguage("pl") }),
                                    Pair("en", { selectLanguage("en") })
-                           )
+                           ),
+                            selectedLang = state.selectedLanguage
                     ) //FIXME this should point to some real anchors
                 }
             }
