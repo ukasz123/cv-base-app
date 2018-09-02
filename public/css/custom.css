@@ -56,3 +56,8 @@
 .push-down {
     margin-top: 25vh;
 }
+
+.projectCardImage {
+    height: 120px;
+    width: 100%;
+}
