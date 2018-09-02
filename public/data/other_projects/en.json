@@ -1,19 +1,26 @@
 {
   "projects": [
     {
-      "title": "<My First Project>",
-      "description": "<The description of the project. Can contain some information about used solutions, the reason behind starting that project, the current state.>",
+      "title": "HTML CV template",
+      "description": "The main reason to make own CV website was to avoid troublesome updates to PDF CV's version. Thanks to having it as a template I can easily add new infomation whenever I want. Also I have found it a good opportunity to check if Kotlin may be right choice for building web applications.",
       "repositoryUrl": "https://bitbucket.org/ukasz123/cv-app-base/src/master/",
-      "skills": ["java"]
+      "skills": ["kotlin", "html5", "css3"],
+      "imageUrl": "images/cv_shot.jpg"
     },
     {
-      "title": "<Second Project>",
-      "description": "<This is showcase of other project properties that may be used to create more appealing project information>",
-      "repositoryUrl": "https://bitbucket.org/ukasz123/cv-app-base/src/master/",
-      "imageUrl": "images/project-image.jpeg",
-      "skills": ["java", "kotlin", "android"],
+      "title": "Dalton Timer",
+      "description": "Mobile application inspired by a clock helping tool for Dalton Plan written in Flutter.",
+      "repositoryUrl": "https://bitbucket.org/ukasz123/dalton_timer/src/master/",
+      "imageUrl": "images/dalton_timer.png",
+      "skills": ["flutter"]
+    },
+    {
+      "title": "Soundpool plugin",
+      "description": "Plugin for Flutter inspired by Sound Pool API for Android. The goal of this plugin is to provide a way for caching sounds in memory before playing.",
+      "repositoryUrl": "https://github.com/ukasz123/soundpool",
+      "skills": ["flutter", "android", "ios"],
       "deploymentUrls": [
-        "https://ukasz123.github.com"
+        "https://pub.dartlang.org/packages/soundpool"
       ]
     }
   ]
