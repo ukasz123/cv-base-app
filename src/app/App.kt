@@ -8,6 +8,7 @@ import kotlinx.html.id
 import kotlinx.html.js.onClickFunction
 import languages.foreignLanguages
 import navigation.navigationPanel
+import projects.otherProjects
 import react.*
 import react.dom.*
 import skills.skillsData
@@ -44,7 +45,7 @@ class App : RComponent<RProps, LanguageState>() {
             div {
                 div("col m3 l2") {
                     navigationPanel(
-                            arrayOf("contactSection", "skills", "workTimeline", "education", "foreignLanguages", "hobbies"),
+                            arrayOf("contactSection", "skills", "workTimeline", "otherProjects", "education", "foreignLanguages", "hobbies"),
                            arrayOf<Pair<String, () -> Unit>>(
                                    Pair("pl", { selectLanguage("pl") }),
                                    Pair("en", { selectLanguage("en") })
@@ -78,6 +79,7 @@ class App : RComponent<RProps, LanguageState>() {
         contactData(state.selectedLanguage)
         skillsData(state.selectedLanguage)
         workTimeline(state.selectedLanguage)
+        otherProjects(state.selectedLanguage)
         education(state.selectedLanguage)
         foreignLanguages(state.selectedLanguage)
         hobbies(state.selectedLanguage)

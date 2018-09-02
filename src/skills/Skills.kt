@@ -115,3 +115,4 @@ internal data class Skill(
         val icon: String?,
         val level: Int
 )
+
