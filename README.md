@@ -4,6 +4,7 @@ Open Sources:
 * [Materialize](https://materializecss.com) framework
 * Social and tech font glyphs were build with the help of [Icomoon](https://icomoon.io/)
 * Other font glyph packs comes from [Mfizz](http://fizzed.com/oss/font-mfizz) and [Fort Awesome](https://fortawesome.com)
+* Language icons comes from [Stripe Flag Set](https://www.iconfinder.com/iconsets/stripe-flag-set) by [Benjamin De Cock](http://dribbble.com/bdc)
 
 Original README.md below
 ---

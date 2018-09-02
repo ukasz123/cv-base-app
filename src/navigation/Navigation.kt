@@ -7,7 +7,7 @@ import react.*
 import react.dom.*
 import app.CVTitle
 
-fun RBuilder.navigationPanel(anchors: Array<String>, langOptions: Array<Pair<String, ()->Unit>>) {
+fun RBuilder.navigationPanel(anchors: Array<String>, langOptions: Array<Pair<String, ()->Unit>>, selectedLang: String) {
     div ("fullHeight"){
         div("container push-down") {
             div {
@@ -25,11 +25,24 @@ fun RBuilder.navigationPanel(anchors: Array<String>, langOptions: Array<Pair<Str
 
             // language options
             div("row") {
+                var widthStyle = "m2"
+                if (langOptions.size % 4 == 0) {
+                    widthStyle = "m3"
+                } else if (langOptions.size % 3 == 0){
+                    widthStyle = "m4"
+                } else if (langOptions.size % 2 == 0) {
+                    widthStyle = "m6"
+                } else if (langOptions.size == 1){
+                    widthStyle = "m12"
+                }
+
                 langOptions.forEach {
 
                     val langData = it
-                    span("col m2 center-align white-text pointer") {
-                        +langData.first
+                    span("col $widthStyle center-align white-text pointer") {
+                        img(src = "images/flag_${langData.first}.png", classes = if (langData.first == selectedLang) "lang-selected" else ""){
+
+                        }
                         attrs { onClickFunction = { langData.second() } }
                     }
 
