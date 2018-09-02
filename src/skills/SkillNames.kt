@@ -13,7 +13,7 @@ enum class SkillNames(val code: String, val title: String) {
     JavaScript("javascript", "JavaScript"),
     HTML5("html5", "HTML"),
     Bootstrap3("bootstrap", "Bootstrap 3"),
-    CSS("css", "CSS"),
+    CSS("css3", "CSS"),
     Google("google", "Google APIs"),
     Xamarin("xamarin", "Xamarin"),
     Flutter("flutter", title = "Flutter"),
