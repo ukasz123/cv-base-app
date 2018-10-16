@@ -12,7 +12,13 @@
       "description": "Aplikacja mobilna inspirowana zegarem daltońskim napisana we Flutterze.",
       "repositoryUrl": "https://bitbucket.org/ukasz123/dalton_timer/src/master/",
       "imageUrl": "images/dalton_timer.png",
-      "skills": ["flutter"]
+      "skills": ["flutter"],
+      "deploymentUrls": [
+        {
+          "type": "GOOGLE_PLAY",
+          "url": "https://play.google.com/store/apps/details?id=pl.ukaszapps.daltontimer"
+        }
+      ]
     },
     {
       "title": "Soundpool plugin",
@@ -20,7 +26,10 @@
       "repositoryUrl": "https://github.com/ukasz123/soundpool",
       "skills": ["flutter", "android", "ios"],
       "deploymentUrls": [
-        "https://pub.dartlang.org/packages/soundpool"
+        {
+          "type": "WEBSITE",
+          "url": "https://pub.dartlang.org/packages/soundpool"
+        }
       ]
     }
   ]
