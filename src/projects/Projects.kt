@@ -12,12 +12,24 @@ import react.*
 import react.dom.*
 import skills.forCode
 
+enum class DeploymentType {
+    WEBSITE,
+    GOOGLE_PLAY,
+    APPLE_APPSTORE;
+
+    companion object  {
+        internal fun forName(name: String) = DeploymentType.valueOf(name.toUpperCase())
+    }
+}
+
+data class Deployment (val type: String, val url: String)
+
 data class Project(
         val title: String,
         val description: String,
         val repositoryUrl: String,
         val skills: Array<String>,
-        val deploymentUrls: Array<String>?,
+        val deploymentUrls: Array<Deployment>?,
         val imageUrl: String?
 )
 
@@ -79,7 +91,7 @@ private fun <T : Tag> RDOMBuilder<T>.buildSimpleCard(project: Project) {
                 +Translator.getTranslation("repositoryUrl")
             }
             project.deploymentUrls?.forEach {
-                a ( href = it, target = "_blank") {
+                a ( href = it.url, target = "_blank") {
                     +Translator.getTranslation("seeMore")
                 }
             }
@@ -117,7 +129,7 @@ private fun <T : Tag> RDOMBuilder<T>.buildRichCard(project: Project) {
         project.deploymentUrls?.let {
             div(classes = "card-action") {
                 it.forEach {
-                    a(href = it, target = "_blank") {
+                    a(href = it.url, target = "_blank") {
                         +Translator.getTranslation("seeMore")
                     }
                 }

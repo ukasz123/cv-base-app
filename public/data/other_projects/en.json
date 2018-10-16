@@ -13,7 +13,10 @@
       "imageUrl": "images/project-image.jpeg",
       "skills": ["java", "kotlin", "android"],
       "deploymentUrls": [
-        "https://ukasz123.github.com"
+        {
+          "type": "WEBSITE",
+          "url": "https://ukasz123.github.com"
+        }
       ]
     }
   ]
