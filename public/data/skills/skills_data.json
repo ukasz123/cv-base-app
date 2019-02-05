@@ -7,6 +7,18 @@
       "level": 8
     },
     {
+      "name": "Flutter",
+      "primary": true,
+      "icon": "flutter",
+      "level": 9
+    },
+    {
+      "name": "Dart",
+      "primary": true,
+      "icon": "dart",
+      "level": 7
+    },
+    {
       "name": "Java",
       "primary": true,
       "icon": "java",
@@ -17,6 +29,12 @@
       "primary": true,
       "icon": "kotlin",
       "level": 8
+    },
+    {
+      "name": "RxJava",
+      "primary": true,
+      "icon": "rxjava",
+      "level": 6
     },
     {
       "name": "Gradle",
@@ -31,54 +49,36 @@
       "level": 4
     },
     {
-      "name": "RxJava",
-      "primary": true,
-      "icon": "rxjava",
-      "level": 8
-    },
-    {
-      "name": "Dart",
-      "primary": true,
-      "icon": "dart",
-      "level": 6
-    },
-    {
-      "name": "Flutter",
-      "primary": true,
-      "icon": "flutter",
-      "level": 6
-    },
-    {
       "name": "Python",
       "primary": false,
       "icon": "python",
-      "level": 2
+      "level": 1
     },
     {
       "name": "SQLite",
       "primary": false,
       "icon": "sqlite",
-      "level": 4
+      "level": 3
     },
     {
       "name": "Realm",
       "primary": false,
-      "level": 5
+      "level": 3
     },
     {
       "name": "Couchbase",
       "primary": false,
-      "level": 4
+      "level": 2
     },
     {
       "name": "Linux",
       "primary": false,
-      "level": 3
+      "level": 4
     },
     {
       "name": "Xamarin",
       "primary": false,
-      "level": 2,
+      "level": 1,
       "icon": "xamarin"
     }
 
