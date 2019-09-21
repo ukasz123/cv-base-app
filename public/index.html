@@ -44,13 +44,14 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Global site tag (Gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131053710-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-131053710-1');
+        function Gtag(){dataLayer.push(arguments);}
+        Gtag('js', new Date());
+        Gtag('config', 'UA-131053710-1');
     </script>
 
     <title>CV of Lukasz Huculak</title>
@@ -74,8 +75,16 @@
 
 <script type="text/javascript">
 	<!-- Materialize JS plugins initialization -->
+	var lastScreen;
 	$(document).ready(function(){
-		$('.scrollspy').scrollSpy({scrollOffset: 0});
+		$('.scrollspy').scrollSpy({scrollOffset: 0, getActiveElement: function(id) {
+		// TODO figure out how to call Kotlin navigation.spyScroll instead
+		if (lastScreen != id){
+		    lastScreen = id;
+		    gtag('event','screen_view', { 'screen_name': id, 'name': 'scroll' });
+		}
+    return 'a[href="#' + id + '"]';
+  }});
 		$('.collapsible').collapsible();
 		$('#tableOfContents').pushpin();
 		<!--$('#skillsCarousel').carousel({fullWidth: true});-->
