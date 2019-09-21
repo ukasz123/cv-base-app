@@ -14,10 +14,14 @@ fun RBuilder.navigationPanel(anchors: Array<String>, langOptions: Array<Pair<Str
                 CVTitle()
             }
             ul(classes = "section table-of-contents") {
-                anchors.forEach {
+                anchors.forEach {sectionCode ->
                     li {
-                        a(href = "#$it", classes = "white-text") {
-                            +Translator.getTranslation(it)
+                        a(href = "#$sectionCode", classes = "white-text") {
+                            +Translator.getTranslation(sectionCode)
+                            attrs { onClickFunction = { Gtag.sendNavigationEvent(
+                                    viewName = sectionCode,
+                                    click = true
+                            ) } }
                         }
                     }
                 }
@@ -50,4 +54,10 @@ fun RBuilder.navigationPanel(anchors: Array<String>, langOptions: Array<Pair<Str
             }
         }
     }
+}
+
+fun spyScroll(sectionCode: String){
+    Gtag.sendNavigationEvent(
+            viewName = sectionCode
+    )
 }

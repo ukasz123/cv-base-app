@@ -11,6 +11,7 @@ object Translator {
             if (value != currentLanguage) {
                 currentLanguage = value
                 updateTranslations()
+                Gtag.setLanguageUsed(value)
             }
         }
     var onTranslationUpdated: (String) -> Unit = {}
