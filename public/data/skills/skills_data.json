@@ -16,7 +16,7 @@
       "name": "Dart",
       "primary": true,
       "icon": "dart",
-      "level": 7
+      "level": 8
     },
     {
       "name": "Java",
@@ -28,13 +28,13 @@
       "name": "Kotlin",
       "primary": true,
       "icon": "kotlin",
-      "level": 8
+      "level": 7
     },
     {
       "name": "RxJava",
       "primary": true,
       "icon": "rxjava",
-      "level": 6
+      "level": 5
     },
     {
       "name": "Gradle",
@@ -49,26 +49,10 @@
       "level": 4
     },
     {
-      "name": "Python",
-      "primary": false,
-      "icon": "python",
-      "level": 1
-    },
-    {
       "name": "SQLite",
       "primary": false,
       "icon": "sqlite",
       "level": 3
-    },
-    {
-      "name": "Realm",
-      "primary": false,
-      "level": 3
-    },
-    {
-      "name": "Couchbase",
-      "primary": false,
-      "level": 2
     },
     {
       "name": "Linux",
@@ -80,7 +64,11 @@
       "primary": false,
       "level": 1,
       "icon": "xamarin"
+    },
+    {
+      "name": "Ruby",
+      "primary": false,
+      "level": 3
     }
-
   ]
 }
