@@ -17,6 +17,10 @@
         {
           "type": "GOOGLE_PLAY",
           "url": "https://play.google.com/store/apps/details?id=pl.ukaszapps.daltontimer"
+        },
+        {
+          "type": "WEBSITE",
+          "url": "https://ukasz-apps.bitbucket.io/dalton/timer/#/"
         }
       ]
     },
