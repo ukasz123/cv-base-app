@@ -31,6 +31,24 @@
           "url": "https://pub.dartlang.org/packages/soundpool"
         }
       ]
+    }, 
+    {
+      "title": "Planning Poker",
+      "description": "Prototyp serwisu WWW usprawniający grę w Scrum pokera w zespołach komunikujących się zdalnie.",
+      "repositoryUrl": "https://bitbucket.org/ukasz123/planning-poker/src/master/",
+      "skills": ["dart", "angular", "bootstrap"],
+      "deploymentUrls": [
+        {
+          "type": "WEBSITE",
+          "url": "https://planning-poker-f529f.web.app/"
+        }
+      ]
+    },
+    {
+      "title": "Android CV App",
+      "description": "Curricullum vitae w formie aplikacji na platformę Android.",
+      "repositoryUrl": "https://github.com/ukasz123/android_cv",
+      "skills": ["android", "kotlin"]
     }
   ]
 }
