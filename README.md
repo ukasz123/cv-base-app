@@ -10,7 +10,7 @@
 ## Build website instructions
 * Tag `master` branch with new version 
 * Run `npm run build`
-* Copy content of _build_ folder to the repository folder for [GitPages project](https://github.com/ukasz123/ukasz123.github.io) project
+* Copy content of _build_ folder to the repository folder for [GitPages project](https://github.com/ukasz123/ukasz123.github.io)
 * Commit changes to the `master` branch to GitPages project repository and add new `release_[version]` tag to it
 
 --- 
