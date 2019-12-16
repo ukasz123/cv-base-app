@@ -44,5 +44,5 @@ fun contactSection(metadata: CVMeta): Node {
           )
       ),
           padding = Dimensions(horizontal = 8f))),
-      weights = listOf(0.3f, 0.7f))
+      weights = listOf(1f, 1.618f))
 }

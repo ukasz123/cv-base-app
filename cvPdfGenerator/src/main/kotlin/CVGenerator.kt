@@ -6,6 +6,7 @@ import com.itextpdf.text.pdf.PdfWriter
 import pl.ukaszapps.itext.nodes.Column
 import sections.common.parseMap
 import sections.contactSection
+import sections.projectsSection
 import sections.skillsSection
 import java.io.File
 import java.io.FileOutputStream
@@ -26,7 +27,9 @@ fun main(args: Array<String>) {
     document.add(Column(
         children = listOf(
             contactSection(meta),
-            skillsSection(meta))
+            skillsSection(meta),
+            projectsSection(meta)
+            )
     ).render())
 
     document.addTitle("CV (generated)")
