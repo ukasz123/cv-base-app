@@ -1,9 +1,10 @@
-import com.itextpdf.text.Document
-import com.itextpdf.text.FontFactory
-import com.itextpdf.text.PageSize
+import com.itextpdf.text.*
 import com.itextpdf.text.pdf.BaseFont
+import com.itextpdf.text.pdf.ColumnText
+import com.itextpdf.text.pdf.PdfPageEventHelper
 import com.itextpdf.text.pdf.PdfWriter
 import pl.ukaszapps.itext.nodes.Column
+import sections.common.getOrError
 import sections.common.parseMap
 import sections.contactSection
 import sections.privateProjectsSection
@@ -11,6 +12,8 @@ import sections.projectsSection
 import sections.skillsSection
 import java.io.File
 import java.io.FileOutputStream
+import java.text.DateFormat
+import java.util.*
 
 
 data class CVMeta(val baseDir: File, val lang: String = "pl", val translations: Map<String, String> = emptyMap())
@@ -21,9 +24,14 @@ fun main(args: Array<String>) {
   val baseDir = File(basePath)
   FontFactory.defaultEncoding = BaseFont.CP1250
   listOf("pl", "en").forEach { lang ->
+    val footerTranslation = parseMap(File("footer_$lang.json"))
     val meta = CVMeta(baseDir = baseDir, lang = lang, translations = parseMap(File(baseDir, "data/translations.$lang.json")))
     val document = Document(PageSize.A4, 50.0f, 50.0f, 50.0f, 50.0f)
     val writer = PdfWriter.getInstance(document, FileOutputStream("build/cv-$lang.pdf"))
+
+    val dateString = DateFormat.getDateInstance(DateFormat.DEFAULT, Locale.forLanguageTag(lang)).format(Date())
+    writer.pageEvent = CVFooter("${footerTranslation.getOrError("footer_prefix")}$dateString")
+    
     document.open()
     document.add(Column(
         children = listOf(
@@ -33,7 +41,6 @@ fun main(args: Array<String>) {
             privateProjectsSection(meta)
             )
     ).render())
-
     document.addTitle("CV (generated)")
     document.addCreationDate()
     document.addLanguage(lang)
@@ -44,4 +51,14 @@ fun main(args: Array<String>) {
   }
 }
 
+private class CVFooter(private val footerText: String): PdfPageEventHelper() {
+  override fun onEndPage(writer: PdfWriter, document: Document) {
+    super.onEndPage(writer, document)
+    val cb = writer.directContent
+    ColumnText.showTextAligned(cb, Element.ALIGN_CENTER,
+        Phrase(footerText, FontFactory.getFont(FontFactory.TIMES, 10f, Font.NORMAL, BaseColor.LIGHT_GRAY)),
+        (document.right() - document.left()) / 2 + document.leftMargin(),
+        document.bottom() - 10, 0f)
+  }
+}
 
