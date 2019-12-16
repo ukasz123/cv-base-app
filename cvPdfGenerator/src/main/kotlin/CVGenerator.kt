@@ -37,7 +37,8 @@ fun main(args: Array<String>) {
             skillsSection(meta),
             projectsSection(meta),
             privateProjectsSection(meta),
-            Row(children = listOf(educationSection(meta), knownLanguagesSection(meta)))
+            Row(children = listOf(educationSection(meta), knownLanguagesSection(meta))),
+            hobbiesSection(meta)
         )
     ).render())
     document.addTitle("CV (generated)")
