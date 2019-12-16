@@ -1,4 +1,4 @@
-package sections
+package sections.common
 
 import pl.ukaszapps.itext.nodes.Text
 

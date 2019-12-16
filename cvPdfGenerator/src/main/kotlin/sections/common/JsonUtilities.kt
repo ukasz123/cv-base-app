@@ -1,4 +1,4 @@
-package sections
+package sections.common
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types

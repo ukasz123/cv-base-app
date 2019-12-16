@@ -3,6 +3,8 @@ package sections
 import CVMeta
 import com.squareup.moshi.JsonClass
 import pl.ukaszapps.itext.nodes.*
+import sections.common.*
+import sections.common.parse
 import java.io.File
 
 @JsonClass(generateAdapter = true)
