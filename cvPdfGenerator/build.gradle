@@ -13,12 +13,14 @@ repositories {
     mavenCentral()
 }
 
-def apache_pdfbox_version='2.0.13'
 def itext_pdf_generator_version = '5.5.13.1'
+def moshi_version = '1.9.2'
 dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     implementation "com.itextpdf:itextpdf:$itext_pdf_generator_version"
+    implementation "com.squareup.moshi:moshi-kotlin:$moshi_version"
+
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 

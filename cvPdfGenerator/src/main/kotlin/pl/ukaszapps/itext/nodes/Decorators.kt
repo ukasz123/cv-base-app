@@ -2,6 +2,7 @@ package pl.ukaszapps.itext.nodes
 
 import com.itextpdf.text.BaseColor
 import com.itextpdf.text.Element
+import com.itextpdf.text.Paragraph
 import com.itextpdf.text.Rectangle
 import com.itextpdf.text.pdf.PdfPTable
 
@@ -76,4 +77,20 @@ class BorderedBox(child: Node, private val border: Border) : SingleChildContaine
     }
   }
 }
+enum class Alignment {
+  LEFT, RIGHT, CENTER
+}
+class Align(child: Node, private val alignment:Alignment) : SingleChildContainer(child) {
+  override fun render(): Element {
+    val a = alignment
+    return Paragraph().apply {
+      alignment = when (a){
+        Alignment.LEFT -> Element.ALIGN_LEFT
+        Alignment.RIGHT -> Element.ALIGN_RIGHT
+        Alignment.CENTER -> Element.ALIGN_CENTER
+      }
+      add(child.render())
+    }
+  }
 
+}
