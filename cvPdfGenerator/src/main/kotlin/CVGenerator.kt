@@ -6,6 +6,7 @@ import com.itextpdf.text.pdf.PdfWriter
 import pl.ukaszapps.itext.nodes.Column
 import sections.common.parseMap
 import sections.contactSection
+import sections.privateProjectsSection
 import sections.projectsSection
 import sections.skillsSection
 import java.io.File
@@ -28,7 +29,8 @@ fun main(args: Array<String>) {
         children = listOf(
             contactSection(meta),
             skillsSection(meta),
-            projectsSection(meta)
+            projectsSection(meta),
+            privateProjectsSection(meta)
             )
     ).render())
 
