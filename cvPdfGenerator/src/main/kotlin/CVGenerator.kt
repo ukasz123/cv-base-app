@@ -1,5 +1,7 @@
 import com.itextpdf.text.Document
+import com.itextpdf.text.FontFactory
 import com.itextpdf.text.PageSize
+import com.itextpdf.text.pdf.BaseFont
 import com.itextpdf.text.pdf.PdfWriter
 import pl.ukaszapps.itext.nodes.Column
 import sections.common.parseMap
@@ -15,6 +17,7 @@ fun main(args: Array<String>) {
   val basePath = args[0]
   val author = if (args.size > 1) args[1] else null
   val baseDir = File(basePath)
+  FontFactory.defaultEncoding = BaseFont.CP1250
   listOf("pl", "en").forEach { lang ->
     val meta = CVMeta(baseDir = baseDir, lang = lang, translations = parseMap(File(baseDir, "data/translations.$lang.json")))
     val document = Document(PageSize.A4, 50.0f, 50.0f, 50.0f, 50.0f)
