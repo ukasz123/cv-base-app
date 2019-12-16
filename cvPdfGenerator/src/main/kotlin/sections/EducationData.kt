@@ -23,7 +23,7 @@ fun educationSection(meta: CVMeta): Node {
               children = educationData.college_studies.mapIndexed {index,  e ->
                 Row(
                     children = listOf(
-                        Text("${index+1}.\t${e.title}", font = defaultBoldFont),
+                        Align(child = Text("${index+1}.\t${e.title}", font = defaultBoldFont),alignment = Alignment.LEFT),
                         Align(
                             alignment = Alignment.RIGHT,
                             child = defaultText(e.period)

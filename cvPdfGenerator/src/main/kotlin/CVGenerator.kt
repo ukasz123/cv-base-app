@@ -4,6 +4,7 @@ import com.itextpdf.text.pdf.ColumnText
 import com.itextpdf.text.pdf.PdfPageEventHelper
 import com.itextpdf.text.pdf.PdfWriter
 import pl.ukaszapps.itext.nodes.Column
+import pl.ukaszapps.itext.nodes.Row
 import sections.*
 import sections.common.getOrError
 import sections.common.parseMap
@@ -36,8 +37,8 @@ fun main(args: Array<String>) {
             skillsSection(meta),
             projectsSection(meta),
             privateProjectsSection(meta),
-            educationSection(meta)
-            )
+            Row(children = listOf(educationSection(meta), knownLanguagesSection(meta)))
+        )
     ).render())
     document.addTitle("CV (generated)")
     document.addCreationDate()
@@ -49,7 +50,7 @@ fun main(args: Array<String>) {
   }
 }
 
-private class CVFooter(private val footerText: String): PdfPageEventHelper() {
+private class CVFooter(private val footerText: String) : PdfPageEventHelper() {
   override fun onEndPage(writer: PdfWriter, document: Document) {
     super.onEndPage(writer, document)
     val cb = writer.directContent
