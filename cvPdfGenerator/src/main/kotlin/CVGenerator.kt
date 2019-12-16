@@ -4,12 +4,9 @@ import com.itextpdf.text.pdf.ColumnText
 import com.itextpdf.text.pdf.PdfPageEventHelper
 import com.itextpdf.text.pdf.PdfWriter
 import pl.ukaszapps.itext.nodes.Column
+import sections.*
 import sections.common.getOrError
 import sections.common.parseMap
-import sections.contactSection
-import sections.privateProjectsSection
-import sections.projectsSection
-import sections.skillsSection
 import java.io.File
 import java.io.FileOutputStream
 import java.text.DateFormat
@@ -31,14 +28,15 @@ fun main(args: Array<String>) {
 
     val dateString = DateFormat.getDateInstance(DateFormat.DEFAULT, Locale.forLanguageTag(lang)).format(Date())
     writer.pageEvent = CVFooter("${footerTranslation.getOrError("footer_prefix")}$dateString")
-    
+
     document.open()
     document.add(Column(
         children = listOf(
             contactSection(meta),
             skillsSection(meta),
             projectsSection(meta),
-            privateProjectsSection(meta)
+            privateProjectsSection(meta),
+            educationSection(meta)
             )
     ).render())
     document.addTitle("CV (generated)")

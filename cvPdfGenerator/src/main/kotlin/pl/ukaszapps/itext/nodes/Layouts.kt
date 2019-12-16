@@ -45,10 +45,8 @@ class NodeList(children: List<Node>, private val type: NodeListType = NodeListTy
         type != NodeListType.DEFAULT,
         type == NodeListType.LETTERED
     ).apply {
-
       children.forEach {
         add(ListItem().apply {
-
           add(it.render())
         })
       }
