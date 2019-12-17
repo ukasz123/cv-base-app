@@ -10,6 +10,9 @@ Known common problems:
 > TypeError: Kotlin.defineModule is not a function
 In this case delete the .cache folder in node_modules [source](https://github.com/JetBrains/create-react-kotlin-app#npm-start-or-yarn-start)
 
+## Initialization
+* run `npm run build-pdf` to generate PDF files required for the application
+
 Original README.md below
 ---
 This project was bootstrapped with [Create React Kotlin App](https://github.com/JetBrains/create-react-kotlin-app).

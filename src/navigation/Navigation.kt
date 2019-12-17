@@ -22,6 +22,12 @@ fun RBuilder.navigationPanel(anchors: Array<String>, langOptions: Array<Pair<Str
                     }
                 }
             }
+            // pdf link
+            div("row") {
+                div ("center-align") {
+                    pdfLink(selectedLang = selectedLang)
+                }
+            }
 
             // language options
             div("row") {
@@ -50,4 +56,12 @@ fun RBuilder.navigationPanel(anchors: Array<String>, langOptions: Array<Pair<Str
             }
         }
     }
+}
+
+fun RBuilder.pdfLink(selectedLang: String) =
+a(href = "generated/cv-$selectedLang.pdf", target="_blank") {
+    img(
+        src = "https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg",
+        classes = "pdf-icon center-align"
+    ) {}
 }

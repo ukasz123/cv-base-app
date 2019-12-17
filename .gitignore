@@ -28,3 +28,4 @@ cv-app.iml
 *.css___jb_tmp___
 cvPdfGenerator/.gradle
 local.properties
+public/generated/*

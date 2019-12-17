@@ -25,7 +25,11 @@ fun main(args: Array<String>) {
     val footerTranslation = parseMap(File("footer_$lang.json"))
     val meta = CVMeta(baseDir = baseDir, lang = lang, translations = parseMap(File(baseDir, "data/translations.$lang.json")))
     val document = Document(PageSize.A4, 50.0f, 50.0f, 50.0f, 50.0f)
-    val writer = PdfWriter.getInstance(document, FileOutputStream("build/cv-$lang.pdf"))
+    val outputFile = File(baseDir,"generated/cv-$lang.pdf")
+    if (!outputFile.parentFile.exists()){
+      outputFile.parentFile.mkdirs()
+    }
+    val writer = PdfWriter.getInstance(document, FileOutputStream(outputFile))
 
     val dateString = DateFormat.getDateInstance(DateFormat.DEFAULT, Locale.forLanguageTag(lang)).format(Date())
     writer.pageEvent = CVFooter("${footerTranslation.getOrError("footer_prefix")}$dateString")
@@ -41,10 +45,10 @@ fun main(args: Array<String>) {
             hobbiesSection(meta)
         )
     ).render())
-    document.addTitle("CV (generated)")
+    document.addTitle("CV ${author ?: ""} (generated)")
     document.addCreationDate()
     document.addLanguage(lang)
-    document.addCreator("CV Generator by Lukasz Huculak")
+    document.addCreator("CV Generator by Łukasz Huculak")
     author?.let { document.addAuthor(it) }
     document.close()
     writer.close()
