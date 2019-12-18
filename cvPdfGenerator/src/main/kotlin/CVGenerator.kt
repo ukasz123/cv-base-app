@@ -3,8 +3,7 @@ import com.itextpdf.text.pdf.BaseFont
 import com.itextpdf.text.pdf.ColumnText
 import com.itextpdf.text.pdf.PdfPageEventHelper
 import com.itextpdf.text.pdf.PdfWriter
-import pl.ukaszapps.itext.nodes.Column
-import pl.ukaszapps.itext.nodes.Row
+import pl.ukaszapps.itext.nodes.*
 import sections.*
 import sections.common.getOrError
 import sections.common.parseMap
@@ -36,14 +35,15 @@ fun main(args: Array<String>) {
 
     document.open()
     document.add(Column(
-        children = listOf(
+            children =     withPadding(
+        listOf(
             contactSection(meta),
             skillsSection(meta),
             projectsSection(meta),
             privateProjectsSection(meta),
             Row(children = listOf(educationSection(meta), knownLanguagesSection(meta))),
             hobbiesSection(meta)
-        )
+        ))
     ).render())
     document.addTitle("CV ${author ?: ""} (generated)")
     document.addCreationDate()
@@ -54,6 +54,11 @@ fun main(args: Array<String>) {
     writer.close()
   }
 }
+
+private fun withPadding(sectionsList: List<Node>): List<Node> =
+        listOf(sectionsList[0]) + sectionsList.subList(fromIndex = 1, toIndex = sectionsList.size).map {
+          Padding(child = it, padding = Dimensions(top = sections.common.sectionHeaderFont.size))
+        }
 
 private class CVFooter(private val footerText: String) : PdfPageEventHelper() {
   override fun onEndPage(writer: PdfWriter, document: Document) {

@@ -31,3 +31,4 @@ lib/kotlin-stdlib-js-sources.jar
 cvPdfGenerator/.gradle
 local.properties
 public/generated/*
+cvPdfGenerator/out
