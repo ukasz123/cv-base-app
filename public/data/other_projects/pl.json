@@ -2,7 +2,7 @@
   "projects": [
     {
       "title": "Szablon CV w HTMLu",
-      "description": "Motywacją do stworzenia własnego CV w wersji HTML była niechęć do aktualizowania wersji PDF. Szablon CV ma mi umożliwić łatwe edytowanie zamieszczonych tam informacji. Przy okazji zamierzałem sprawdzić, jak sprawdza się kompilowanie kodu w Kotlinie do JavaScriptu.",
+      "description": "Motywacją do stworzenia własnego CV w wersji HTML była niechęć do aktualizowania wersji PDF. Szablon CV ma mi umożliwić łatwe edytowanie zamieszczonych tam informacji. Przy okazji zamierzałem sprawdzić, jak sprawdza się kompilowanie kodu w Kotlinie do JavaScriptu. Dodatkowo zbudowałem generator CV w formacie PDF i udostępniłem wygenerowane pliki na stronie do pobrania.",
       "repositoryUrl": "https://bitbucket.org/ukasz123/cv-app-base/src/master/",
       "skills": ["kotlin", "html5", "css3"],
       "imageUrl": "images/cv_shot.jpeg"
