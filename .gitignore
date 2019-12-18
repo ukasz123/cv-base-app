@@ -28,3 +28,7 @@ cv-app.iml
 lib/kotlin-stdlib-js.jar
 lib/kotlin-stdlib-js-sources.jar
 *.css___jb_tmp___
+cvPdfGenerator/.gradle
+local.properties
+public/generated/*
+cvPdfGenerator/out

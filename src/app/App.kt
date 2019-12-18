@@ -8,6 +8,7 @@ import kotlinx.html.id
 import kotlinx.html.js.onClickFunction
 import languages.foreignLanguages
 import navigation.navigationPanel
+import navigation.pdfLink
 import projects.otherProjects
 import react.*
 import react.dom.*
@@ -69,6 +70,11 @@ class App : RComponent<RProps, LanguageState>() {
                     div("btn-flat white-text") {
                         +targetLang
                         attrs { onClickFunction = { selectLanguage(targetLang) } }
+                    }
+                }
+                div("right") {
+                    div("btn-flat") {
+                        pdfLink(selectedLang = state.selectedLanguage)
                     }
                 }
 
