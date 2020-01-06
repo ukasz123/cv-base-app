@@ -32,3 +32,4 @@ cvPdfGenerator/.gradle
 local.properties
 public/generated/*
 cvPdfGenerator/out
+graphics/*.png

@@ -28,11 +28,24 @@
       "title": "Soundpool plugin",
       "description": "Plugin dla Fluttera inspirowany API Sound Pool dla Android-a. Celem było stworzenie możliwości ładowania plików dżwiękowych do pamięci, co przyspieszy odtwarzanie.",
       "repositoryUrl": "https://github.com/ukasz123/soundpool",
-      "skills": ["flutter", "android", "ios"],
+      "skills": ["flutter", "android", "ios", "dart"],
       "deploymentUrls": [
         {
           "type": "WEBSITE",
           "url": "https://pub.dartlang.org/packages/soundpool"
+        }
+      ]
+    },
+    {
+      "title": "FairBid SDK for Flutter plugin",
+      "description": "Plugin dla Fluttera dostarczający API do integracji z FairBid SDK - platformy optymalizującej dochody z reklam pochodzących od różnych dostawców.",
+      "repositoryUrl": "https://github.com/ukasz123/fairbid_flutter",
+      "skills": ["flutter", "android", "ios"],
+      "imageUrl": "images/fairbid_flutter_github_logo.svg",
+      "deploymentUrls": [
+        {
+          "type": "WEBSITE",
+          "url": "https://pub.dartlang.org/packages/fairbid_flutter"
         }
       ]
     },
