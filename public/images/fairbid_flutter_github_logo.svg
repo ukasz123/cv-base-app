@@ -16,7 +16,10 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
-   sodipodi:docname="fairbid_flutter_github_logo.svg">
+   sodipodi:docname="fairbid_flutter_github_logo.svg"
+   inkscape:export-filename="C:\Android\projekty\cv-app-private\graphics\fairbid_flutter_github_logo_1280x640.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <defs
      id="defs2">
     <clipPath
@@ -312,10 +315,10 @@
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="740.93063"
+     inkscape:cx="567.1844"
      inkscape:cy="454.68605"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -326,7 +329,8 @@
      inkscape:window-height="745"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
-     inkscape:window-maximized="1">
+     inkscape:window-maximized="1"
+     inkscape:pagecheckerboard="false">
     <inkscape:grid
        type="xygrid"
        id="grid5055" />
@@ -344,17 +348,24 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Layer 1"
+     inkscape:label="Background"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-127.66663)"
-     sodipodi:insensitive="true" />
+     transform="translate(0,-127.66663)">
+    <rect
+       style="fill:#e6e6e6;fill-opacity:0.31444758;stroke-width:0.26458332;opacity:1"
+       id="rect954"
+       width="338.66666"
+       height="169.33333"
+       x="0"
+       y="127.66663"
+       ry="6.3578318e-007" />
+  </g>
   <g
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Bounds"
-     style="display:none"
-     sodipodi:insensitive="true">
+     style="display:none">
     <rect
        style="fill:#ffffff;fill-opacity:0;stroke-width:0.26458332"
        id="rect5058"
@@ -391,7 +402,8 @@
   <g
      inkscape:groupmode="layer"
      id="layer4"
-     inkscape:label="FairBid">
+     inkscape:label="FairBid"
+     sodipodi:insensitive="true">
     <g
        id="g6351"
        transform="matrix(1.9444747,0,0,1.9444747,-276.217,-81.659387)">
@@ -505,7 +517,8 @@
   <g
      inkscape:groupmode="layer"
      id="layer5"
-     inkscape:label="Flutter">
+     inkscape:label="Flutter"
+     sodipodi:insensitive="true">
     <g
        id="g8309"
        transform="matrix(4.1709747,0,0,4.1709747,-581.82407,-251.61333)">
