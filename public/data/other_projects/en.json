@@ -50,6 +50,19 @@
       ]
     },
     {
+      "title": "Matrix Code Clock",
+      "description": "Project-submission for \"Flutter Clock Challenge\" - clock face inspired with \"falling code\" from the \"Matrix\" movie series.",
+      "repositoryUrl": "https://github.com/ukasz123/matrix_clock",
+      "skills": ["flutter"],
+      "imageUrl": "https://github.com/ukasz123/matrix_clock/raw/master/screenshots/clock.png",
+      "deploymentUrls" : [
+        {
+          "type": "WEBSITE",
+          "url": "matrix-clock/index.html"
+        }
+      ]
+    },
+    {
       "title": "Planning Poker",
       "description": "A prototype of a website that enhances playing Scrum poker in teams working remotely.",
       "repositoryUrl": "https://bitbucket.org/ukasz123/planning-poker/src/master/",

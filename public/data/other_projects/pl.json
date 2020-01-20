@@ -26,7 +26,7 @@
     },
     {
       "title": "Soundpool plugin",
-      "description": "Plugin dla Fluttera inspirowany API Sound Pool dla Android-a. Celem było stworzenie możliwości ładowania plików dżwiękowych do pamięci, co przyspieszy odtwarzanie.",
+      "description": "Plugin dla Fluttera inspirowany API Sound Pool dla Android-a. \nCelem było stworzenie możliwości ładowania plików dżwiękowych do pamięci, co przyspieszy odtwarzanie.",
       "repositoryUrl": "https://github.com/ukasz123/soundpool",
       "skills": ["flutter", "android", "ios", "dart"],
       "deploymentUrls": [
@@ -46,6 +46,19 @@
         {
           "type": "WEBSITE",
           "url": "https://pub.dartlang.org/packages/fairbid_flutter"
+        }
+      ]
+    },
+    {
+      "title": "Matrix Code Clock",
+      "description": "Projekt przeznaczony na \"Flutter Clock Challenge\" - zegar elektroniczny wyświetlający godzinę na tle inspirowanym \"spadającym kodem\" znanym z serii filmów \"Matrix\".",
+      "repositoryUrl": "https://github.com/ukasz123/matrix_clock",
+      "skills": ["flutter"],
+      "imageUrl": "https://github.com/ukasz123/matrix_clock/raw/master/screenshots/clock.png",
+      "deploymentUrls" : [
+        {
+          "type": "WEBSITE",
+          "url": "matrix-clock/index.html"
         }
       ]
     },
