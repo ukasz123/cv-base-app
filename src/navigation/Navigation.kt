@@ -1,5 +1,6 @@
 package navigation
 
+import Gtag.sendEvent
 import i18n.Translator
 import react.RBuilder
 import kotlinx.html.js.onClickFunction
@@ -21,6 +22,7 @@ fun RBuilder.navigationPanel(anchors: Array<String>, langOptions: Array<Pair<Str
                             attrs { onClickFunction = { Gtag.sendNavigationEvent(
                                     viewName = sectionCode,
                                     click = true
+
                             ) } }
                         }
                     }
@@ -68,10 +70,13 @@ a(href = "generated/cv-$selectedLang.pdf", target="_blank") {
             src = "https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg",
             classes = "pdf-icon center-align"
     ) {}
+    attrs {
+        onClickFunction = {sendEvent("pdf_download", selectedLang)}
+    }
 }
     
 fun spyScroll(sectionCode: String){
-    Gtag.sendNavigationEvent(
+    Gtag.sendScrollingEvent(
             viewName = sectionCode
     )
 }

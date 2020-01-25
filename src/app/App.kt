@@ -94,6 +94,7 @@ class App : RComponent<RProps, LanguageState>() {
 
     private fun selectLanguage(langCode: String) {
         setState { selectedLanguage = langCode }
+
     }
 }
 
