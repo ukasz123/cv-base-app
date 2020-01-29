@@ -3,5 +3,7 @@
   "address": "<Your City>",
   "linkedin": "<Your LinkedIn Profile url>",
   "github": "<Your Github Profile url>",
-  "bitbucket": "<Your Bitbucket Profile url>"
+  "bitbucket": "<Your Bitbucket Profile url>",
+  "phone": "00123456789",
+  "email": "your@email.org"
 }
