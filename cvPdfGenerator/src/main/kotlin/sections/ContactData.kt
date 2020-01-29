@@ -24,6 +24,7 @@ internal operator fun ContactData?.plus(other: ContactData?) = other?.let {
             address = this?.address ?: it.address,
             linkedin = this?.linkedin ?: it.linkedin,
             bitbucket = this?.bitbucket ?: it.bitbucket,
+            github = this?.github ?: it.github,
             phone = this?.phone ?: it.phone,
             email = this?.email ?: it.email
     )
