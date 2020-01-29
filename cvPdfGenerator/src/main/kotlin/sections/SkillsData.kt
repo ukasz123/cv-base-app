@@ -30,20 +30,22 @@ class SkillsData {
 
 
 fun skillsSection(metadata: CVMeta): Node {
-  val skillsDataFile = File(metadata.baseDir, "data/skills/skills_data.json")
+  val skillsDataFile = File(metadata.publicDataBaseDir, "data/skills/skills_data.json")
   val translations = metadata.translations
   val skills = parse<SkillsData>(skillsDataFile)
-  return Column(
-      children = listOf(
-          sectionText(translations.getOrError("skills")),
-          NodeList(
-              type = NodeListType.NUMBERED,
-              children = (skills.skills ?: emptyList()).mapNotNull {
-                it.toNode()
-              }
-          )
-      )
-  )
+  return skills.render {
+    Column(
+            children = listOf(
+                    sectionText(translations.getOrError("skills")),
+                    NodeList(
+                            type = NodeListType.NUMBERED,
+                            children = (it.skills ?: emptyList()).mapNotNull {
+                              it.toNode()
+                            }
+                    )
+            )
+    )
+  }
 }
 
 private fun Skill.toNode(): Node? {
