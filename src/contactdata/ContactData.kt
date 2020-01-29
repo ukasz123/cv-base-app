@@ -11,6 +11,8 @@ external interface ContactData {
     val linkedin: String
     val github: String
     val bitbucket: String
+    val phone: String?
+    val email: String?
 }
 
 interface ContactDataState : RState {
