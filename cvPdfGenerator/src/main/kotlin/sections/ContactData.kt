@@ -9,22 +9,61 @@ import java.io.File
 
 @JsonClass(generateAdapter = true)
 internal data class ContactData(
-    var name: String? = null,
-    var address: String? = null,
-    var linkedin: String? = null,
-    var github: String? = null,
-    var bitbucket: String? = null,
-    var phone: String? = null,
-    var email: String? =null
+        var name: String? = null,
+        var address: String? = null,
+        var linkedin: String? = null,
+        var github: String? = null,
+        var bitbucket: String? = null,
+        var phone: String? = null,
+        var email: String? = null
 )
+
+internal operator fun ContactData?.plus(other: ContactData?) = other?.let {
+    ContactData(
+            name = this?.name ?: it.name,
+            address = this?.address ?: it.address,
+            linkedin = this?.linkedin ?: it.linkedin,
+            bitbucket = this?.bitbucket ?: it.bitbucket,
+            phone = this?.phone ?: it.phone,
+            email = this?.email ?: it.email
+    )
+} ?: this
 
 fun contactSection(metadata: CVMeta): Node {
     val contactProfilePhotoFile = File(metadata.publicDataBaseDir, "images/profile_photo.jpg")
-    val contactDataFile = File(metadata.publicDataBaseDir, "data/contactdata/${metadata.lang}.json")
-    val contactData = parse<ContactData>(contactDataFile)
+    val publicContactDataFile = File(metadata.publicDataBaseDir, "data/contactdata/${metadata.lang}.json")
+    val privateContactDataFile = File(metadata.privateDataBaseDir, "data/contactdata/${metadata.lang}.json")
+    val contactData = parse<ContactData>(publicContactDataFile) + parse<ContactData>(privateContactDataFile)
+
     val translations = metadata.translations
     return contactData.render {
-        Row(children = listOf<Node>(
+        var contactSectionChildren: List<Node> = listOf(
+                sectionText(translations.getOrError("contactSection")),
+                labelText(translations.getOrError("address")),
+                defaultText(it.address ?: ""))
+        it.email?.let {
+            contactSectionChildren += listOf(
+                    labelText(translations.getOrError("email")),
+                    defaultText(it)
+            )
+        }
+        it.phone?.let {
+            contactSectionChildren += listOf(
+                    labelText(translations.getOrError("phone")),
+                    defaultText(it)
+            )
+        }
+        contactSectionChildren += listOf(
+
+                labelText(translations.getOrError("social")),
+                Column(children = listOf(
+                        defaultText(it.linkedin ?: ""),
+                        defaultText(it.bitbucket ?: ""),
+                        defaultText(it.github ?: "")
+                )
+                )
+        )
+        Row(children = listOf(
                 Column(
                         children = listOf(
                                 Image(contactProfilePhotoFile.absolutePath),
@@ -33,18 +72,7 @@ fun contactSection(metadata: CVMeta): Node {
                 ),
                 Padding(child =
                 Column(
-                        children = listOf(
-                                sectionText(translations.getOrError("contactSection")),
-                                labelText(translations.getOrError("address")),
-                                defaultText(it.address ?: ""),
-                                labelText(translations.getOrError("social")),
-                                Column(children = listOf(
-                                        defaultText(it.linkedin ?: ""),
-                                        defaultText(it.bitbucket ?: ""),
-                                        defaultText(it.github ?: "")
-                                )
-                                )
-                        )
+                        children = contactSectionChildren
                 ),
                         padding = Dimensions(horizontal = 8f))),
                 weights = listOf(1f, 1.618f))

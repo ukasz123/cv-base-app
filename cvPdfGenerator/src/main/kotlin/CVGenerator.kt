@@ -14,7 +14,7 @@ import java.text.DateFormat
 import java.util.*
 
 
-data class CVMeta(val publicDataBaseDir: File, val lang: String = "pl", val translations: Map<String, String> = emptyMap())
+data class CVMeta(val publicDataBaseDir: File, val lang: String = "pl", val translations: Map<String, String> = emptyMap(), val privateDataBaseDir: File)
 
 fun main(args: Array<String>) {
   val basePath = args[0]
@@ -25,7 +25,7 @@ fun main(args: Array<String>) {
   FontFactory.defaultEncoding = BaseFont.CP1250
   listOf("pl", "en").forEach { lang ->
     val footerTranslation = parseMap(File("footer_$lang.json"))
-    val meta = CVMeta(publicDataBaseDir = publicDataBaseDir, lang = lang, translations = parseMap(File(publicDataBaseDir, "data/translations.$lang.json")))
+    val meta = CVMeta(publicDataBaseDir = publicDataBaseDir, privateDataBaseDir = privateDataBaseDir, lang = lang, translations = parseMap(File(publicDataBaseDir, "data/translations.$lang.json")))
     val document = Document(PageSize.A4, 50.0f, 50.0f, 50.0f, 50.0f)
     val outputFile = File(publicDataBaseDir,"generated/cv-$lang.pdf")
     if (!outputFile.parentFile.exists()){
