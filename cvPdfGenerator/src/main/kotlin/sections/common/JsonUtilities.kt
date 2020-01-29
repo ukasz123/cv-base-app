@@ -17,9 +17,9 @@ private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
     .build()
 
-internal inline fun <reified T> parse(jsonFile: File): T = moshi.adapter(T::class.java).fromJson(
+internal inline fun <reified T> parse(jsonFile: File): T? = if (jsonFile.exists()) moshi.adapter(T::class.java).fromJson(
     Okio.buffer(Okio.source(jsonFile))
-)!!
+) else null
 
 internal fun parseMap(jsonFile: File): Map<String, String> = moshi.adapter<Map<String, String>>(simpleMapType).fromJson(
     Okio.buffer(Okio.source(jsonFile))
