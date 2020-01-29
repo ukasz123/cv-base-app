@@ -23,42 +23,46 @@ fun projectsSection(metadata: CVMeta): Node {
   val projectsFile = File(projectsBaseDir, "projects.json")
   val projectsData = parse<ProjectsData>(projectsFile)
   val translations = metadata.translations
+  return projectsData.render {
 
-  fun Project.toNode(): Node {
-    val projectDescriptionFile = File(projectsBaseDir, "$code/${metadata.lang}.json")
-    val descriptionExist = projectDescriptionFile.exists()
 
-    var description: ProjectDescription? = null
-    if (descriptionExist) {
-      description = parse<ProjectDescription>(projectDescriptionFile)
-    }
-    return Row(
-        weights = listOf(1.618f, 1f),
-        children = listOf(
-            Column(children = listOfNotNull(
-                Text(description?.title ?: name, font = defaultBoldFont),
-                description?.let { defaultText(it.description) }
-            )),
-            Column(
-                children = listOfNotNull(
-                    Align(
-                        alignment = Alignment.RIGHT, child = defaultText("$from - ${to
-                        ?: translations.getOrError("now")}")),
-                    this.company?.let {
-                      Align(
-                          alignment = Alignment.RIGHT, child = defaultText(it))
-                    }
-                )
-            )
+      fun Project.toNode(): Node {
+          val projectDescriptionFile = File(projectsBaseDir, "$code/${metadata.lang}.json")
+          val descriptionExist = projectDescriptionFile.exists()
 
-        )
-    )
+          var description: ProjectDescription? = null
+          if (descriptionExist) {
+              description = parse<ProjectDescription>(projectDescriptionFile)
+          }
+          return Row(
+                  weights = listOf(1.618f, 1f),
+                  children = listOf(
+                          Column(children = listOfNotNull(
+                                  Text(description?.title ?: name, font = defaultBoldFont),
+                                  description?.let { defaultText(it.description) }
+                          )),
+                          Column(
+                                  children = listOfNotNull(
+                                          Align(
+                                                  alignment = Alignment.RIGHT, child = defaultText("$from - ${to
+                                                  ?: translations.getOrError("now")}")),
+                                          this.company?.let {
+                                              Align(
+                                                      alignment = Alignment.RIGHT, child = defaultText(it))
+                                          }
+                                  )
+                          )
+
+                  )
+          )
+      }
+      
+      Column(
+              children = listOf(listOf(
+                      sectionText(translations.getOrError("workTimeline"))
+              ),
+                      it.projects.map(Project::toNode)
+              ).flatten()
+      )
   }
-  return Column(
-      children = listOf(listOf(
-          sectionText(translations.getOrError("workTimeline"))
-      ),
-          projectsData.projects.map(Project::toNode)
-      ).flatten()
-  )
 }
