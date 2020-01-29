@@ -49,6 +49,20 @@ class ContactDataComponent : RComponent<LanguageState, ContactDataState>() {
                             +it.address
                         }
                     }, "indigo")
+                    it.email?.let { email ->
+                        simpleListItem("contact_mail", Translator.getTranslation("email"), {
+                            p {
+                                +email
+                            }
+                        }, "purple darken-2")
+                    }
+                    it.phone?.let { phone ->
+                        simpleListItem("contact_phone", Translator.getTranslation("phone"), {
+                            p {
+                                +phone
+                            }
+                        }, "amber darken-4")
+                    }
                     simpleListItem("public", Translator.getTranslation("social"), {
                         div("row") {
                             div("col s4") {
@@ -77,7 +91,7 @@ class ContactDataComponent : RComponent<LanguageState, ContactDataState>() {
                                 }
                             }
                         }
-                    }, "lime")
+                    }, "lime darken-1")
                 }
             }
         }
