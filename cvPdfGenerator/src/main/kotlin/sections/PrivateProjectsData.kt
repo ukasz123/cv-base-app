@@ -22,7 +22,7 @@ data class PrivateProjects(val projects: List<PrivateProject> = emptyList())
 
 fun privateProjectsSection(metadata: CVMeta): Node {
   val translations = metadata.translations
-  val privateProjectsFile = File(metadata.baseDir, "data/other_projects/${metadata.lang}.json")
+  val privateProjectsFile = File(metadata.publicDataBaseDir, "data/other_projects/${metadata.lang}.json")
   val privateProjectsData = parse<PrivateProjects>(privateProjectsFile)
   println()
   return Column(

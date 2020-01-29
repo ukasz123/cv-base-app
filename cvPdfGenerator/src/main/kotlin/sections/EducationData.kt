@@ -13,7 +13,7 @@ data class Education(val title: String, val period: String)
 data class EducationData (val college_studies: List<Education>)
 
 fun educationSection(meta: CVMeta): Node {
-  val educationDataFile = File(meta.baseDir, "data/education/${meta.lang}.json")
+  val educationDataFile = File(meta.publicDataBaseDir, "data/education/${meta.lang}.json")
   val educationData = parse<EducationData>(educationDataFile)
   val translations = meta.translations
   return Column(

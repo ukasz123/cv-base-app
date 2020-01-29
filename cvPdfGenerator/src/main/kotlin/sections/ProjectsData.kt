@@ -19,7 +19,7 @@ data class ProjectsData(var projects: List<Project> = emptyList())
 data class ProjectDescription(val title: String? = null, val description: String)
 
 fun projectsSection(metadata: CVMeta): Node {
-  val projectsBaseDir = File(metadata.baseDir, "data/history")
+  val projectsBaseDir = File(metadata.publicDataBaseDir, "data/history")
   val projectsFile = File(projectsBaseDir, "projects.json")
   val projectsData = parse<ProjectsData>(projectsFile)
   val translations = metadata.translations

@@ -13,7 +13,7 @@ data class LanguagesData(val name: String, val details: String? = null)
 data class KnownLanguages(val known: List<LanguagesData> = emptyList())
 
 fun knownLanguagesSection(metadata: CVMeta): Node {
-  val languagesDataFile = File(metadata.baseDir, "data/foreign_languages/${metadata.lang}.json")
+  val languagesDataFile = File(metadata.publicDataBaseDir, "data/foreign_languages/${metadata.lang}.json")
   val languagesData = parse<KnownLanguages>(languagesDataFile)
   return Column(
       children = listOf(

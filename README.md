@@ -6,6 +6,9 @@ Open Sources:
 * Other font glyph packs comes from [Mfizz](http://fizzed.com/oss/font-mfizz) and [Fort Awesome](https://fortawesome.com)
 * Language icons comes from [Stripe Flag Set](https://www.iconfinder.com/iconsets/stripe-flag-set) by [Benjamin De Cock](http://dribbble.com/bdc)
 
+### Private data
+Add `private/data` folder with the same structure as `public/data`. All entries are optional.
+
 Known common problems:
 > TypeError: Kotlin.defineModule is not a function
 In this case delete the .cache folder in node_modules [source](https://github.com/JetBrains/create-react-kotlin-app#npm-start-or-yarn-start)

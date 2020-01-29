@@ -30,7 +30,7 @@ class SkillsData {
 
 
 fun skillsSection(metadata: CVMeta): Node {
-  val skillsDataFile = File(metadata.baseDir, "data/skills/skills_data.json")
+  val skillsDataFile = File(metadata.publicDataBaseDir, "data/skills/skills_data.json")
   val translations = metadata.translations
   val skills = parse<SkillsData>(skillsDataFile)
   return Column(

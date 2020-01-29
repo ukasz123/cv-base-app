@@ -13,12 +13,14 @@ internal data class ContactData(
     var address: String? = null,
     var linkedin: String? = null,
     var github: String? = null,
-    var bitbucket: String? = null
+    var bitbucket: String? = null,
+    var phone: String? = null,
+    var email: String? =null
 )
 
 fun contactSection(metadata: CVMeta): Node {
-  val contactProfilePhotoFile = File(metadata.baseDir, "images/profile_photo.jpg")
-  val contactDataFile = File(metadata.baseDir, "data/contactdata/${metadata.lang}.json")
+  val contactProfilePhotoFile = File(metadata.publicDataBaseDir, "images/profile_photo.jpg")
+  val contactDataFile = File(metadata.publicDataBaseDir, "data/contactdata/${metadata.lang}.json")
   val contactData = parse<ContactData>(contactDataFile)
   val translations = metadata.translations
   return Row(children = listOf<Node>(
