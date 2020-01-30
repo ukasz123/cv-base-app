@@ -9,6 +9,7 @@
 	"nameAndSurname": "Name",
 	"address": "Address",
 	"email": "E-mail",
+	"phone": "Phone",
 	"projects": "Projects",
 	"now": "now",
 	"cvTitle": "CV of Lukasz Huculak",
