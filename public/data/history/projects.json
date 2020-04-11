@@ -2,7 +2,7 @@
   "projects": [
     {
       "code": "Fyber",
-      "name": "Fyber SDK",
+      "name": "Mobile Advertisements Mediation SDK",
       "from": "2018-06",
       "skillsUsed": [
         "android",
@@ -26,7 +26,7 @@
     },
     {
       "code": "engelCARD",
-      "name": "engelCARD",
+      "name": "Healthcare App",
       "from": "2018-03",
       "to": "2018-03",
       "skillsUsed": [
@@ -47,7 +47,7 @@
     },
     {
       "code": "Jodel",
-      "name": "Jodel",
+      "name": "Social app",
       "from": "2017-10",
       "to": "2018-01",
       "skillsUsed": [
