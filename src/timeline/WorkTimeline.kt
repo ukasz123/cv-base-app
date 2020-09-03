@@ -82,23 +82,22 @@ class WorkTimeline : RComponent<LanguageState, WorkTimelineState>() {
                 val nextStateProjects = state.projects.copyOf()
                 val translatedTitle = it.title
                 val translatedDescription = it.description
+                var projectTranslated = project.copy()
                 if (translatedTitle != null || translatedDescription != null) {
-                    val projectTranslated = project.copy(
+                    projectTranslated = projectTranslated.copy(
                             translatedTitle = translatedTitle?.toString(),
                             translatedDescription = translatedDescription?.toString()
                     )
-                    nextStateProjects[index] = projectTranslated
                 }
                 it.urls?.let { urls ->
-                    console.log("Updating urls $urls for ${project.code}")
-                    val projectTranslated = project.copy(
+                    projectTranslated = projectTranslated.copy(
                             urls = urls
                     )
-                    nextStateProjects[index] = projectTranslated
                 }
                 setState {
-                    console.log("Updating state with updated projects: $nextStateProjects")
-                    this.projects = nextStateProjects }
+                    nextStateProjects[index] = projectTranslated
+                    this.projects = nextStateProjects
+                }
             }
         }
     }
@@ -141,9 +140,9 @@ class WorkTimeline : RComponent<LanguageState, WorkTimelineState>() {
                                 parseMarkdown(it.description)
                                 p {
                                     it?.urls?.let { urls ->
-                                        urls.forEach { u ->
-                                            a(href = u.url, target = "_blank") {
-                                                span("grey-text text-lighten-3"){ +u.title }
+                                        urls.forEach { url ->
+                                            a(href = url.url, target = "_blank") {
+                                               span("orange-text text-lighten-3"){ +url.title }
                                             }
                                             +" "
                                         }
