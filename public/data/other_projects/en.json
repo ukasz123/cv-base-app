@@ -9,7 +9,7 @@
     },
     {
       "title": "Dalton Timer",
-      "description": "Mobile application inspired by a clock helping tool for Dalton Plan written in Flutter.",
+      "description": "The timer inspired by the tool for the Dalton method. Helps children understand time passing.",
       "repositoryUrl": "https://bitbucket.org/ukasz123/dalton_timer/src/master/",
       "imageUrl": "images/dalton_timer.png",
       "skills": ["flutter"],

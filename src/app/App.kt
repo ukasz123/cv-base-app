@@ -47,20 +47,20 @@ class App : RComponent<RProps, LanguageState>() {
                 div("col m3 l2") {
                     navigationPanel(
                             arrayOf("contactSection", "skills", "workTimeline", "otherProjects", "education", "foreignLanguages", "hobbies"),
-                           arrayOf<Pair<String, () -> Unit>>(
-                                   Pair("pl", { selectLanguage("pl") }),
-                                   Pair("en", { selectLanguage("en") })
-                           ),
+                            arrayOf<Pair<String, () -> Unit>>(
+                                    Pair("pl", { selectLanguage("pl") }),
+                                    Pair("en", { selectLanguage("en") })
+                            ),
                             selectedLang = state.selectedLanguage
                     ) //FIXME this should point to some real anchors
                 }
             }
         }
 
-        nav ("hide-on-med-and-up teal"){
+        nav("hide-on-med-and-up teal") {
             attrs.id = "languageSelector"
             div("nav-wrapper container") {
-                div ("left"){
+                div("left") {
                     span {
                         +Translator.getTranslation("cvTitle")
                     }
@@ -106,14 +106,16 @@ fun RBuilder.contentSection(id: String? = null, classes: String? = null, section
         contentPadding(sectionContent = sectionContent)
     }
 }
-fun RBuilder.contentPadding(classes: String? = "section", sectionContent: RBuilder.() -> Unit)=
-        div("container "+(classes?: "")) {
+
+fun RBuilder.contentPadding(classes: String? = "section", sectionContent: RBuilder.() -> Unit) =
+        div("container " + (classes ?: "")) {
             div("row") {
 
                 div(classes = "col s12 m9 l10 offset-m3 offset-l2") {
                     sectionContent()
                 }
-            }}
+            }
+        }
 
 fun RBuilder.contentTitle(title: String) = h5("white-text") { +title }
 
@@ -125,7 +127,9 @@ internal fun fetchDataFromJsonFile(path: String, fulfilled: (Json) -> Unit) {
             .then(
                     {
                         fulfilled(it as Json)
-                    },
+                    }
+            ).then(
+                    { it },
                     {
                         console.warn("Failed to load data from $path: ${it.toPrettyString()}")
                     }
@@ -138,7 +142,10 @@ internal fun <T : Any> fetchDataFromJsonFile(path: String, fulfilled: (T) -> Uni
             .then(
                     {
                         fulfilled(JSON.parse(it))
-                    },
+                    }
+            )
+            .then(
+                    { it },
                     {
                         console.warn("Failed to load data from $path: ${it.toPrettyString()}")
                     }
@@ -160,7 +167,7 @@ internal fun RBuilder.parseMarkdown(markdownString: String): ReactElement {
             val paragraph = blocks[i]
             if (paragraph.startsWith(" *")) {
                 // add bullet list
-                ul ("browser-default"){
+                ul("browser-default") {
                     while (i < blocks.size && blocks[i].startsWith(" *")) {
                         li {
                             +blocks[i].substring(2)
