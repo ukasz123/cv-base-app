@@ -16,7 +16,9 @@ data class Project(
 
 data class ProjectsData(var projects: List<Project> = emptyList())
 
-data class ProjectDescription(val title: String? = null, val description: String)
+data class UrlData(val title: String, val url: String)
+
+data class ProjectDescription(val title: String? = null, val description: String, val urls: List<UrlData>? = null)
 
 fun projectsSection(metadata: CVMeta): Node {
   val projectsBaseDir = File(metadata.publicDataBaseDir, "data/history")
@@ -40,7 +42,14 @@ fun projectsSection(metadata: CVMeta): Node {
                           Column(children = listOfNotNull(
                                   Text(description?.title ?: name, font = defaultBoldFont),
                                   description?.let { defaultText(it.description) }
-                          )),
+                          ) +
+                              (description?.urls?.map {
+                                listOf(
+                                Text(it.title),
+                                Text(it.url, font = captionFont)
+                                )
+                              }?.flatten()?.toList() ?: emptyList())
+                          ),
                           Column(
                                   children = listOfNotNull(
                                           Align(
