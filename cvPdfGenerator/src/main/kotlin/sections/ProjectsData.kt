@@ -37,7 +37,7 @@ fun projectsSection(metadata: CVMeta): Node {
               description = parse<ProjectDescription>(projectDescriptionFile)
           }
           return Row(
-                  weights = listOf(1.618f, 1f),
+                  weights = listOf(1.75f, 1f),
                   children = listOf(
                           Column(children = listOfNotNull(
                                   Text(description?.title ?: name, font = defaultBoldFont),
@@ -45,7 +45,7 @@ fun projectsSection(metadata: CVMeta): Node {
                           ) +
                               (description?.urls?.map {
                                 listOf(
-                                Text(it.title),
+                                Text(it.title+":", font = labelFont),
                                 Text(it.url, font = captionFont)
                                 )
                               }?.flatten()?.toList() ?: emptyList())
