@@ -8,6 +8,7 @@ import react.RState
 import react.dom.*
 import react.setState
 import skills.forCode
+import kotlin.js.*
 
 
 data class History(val projects: Array<Project>)
@@ -20,7 +21,8 @@ data class Project(
         val to: String? = null,
         val company: String? = null,
         private val translatedTitle: String? = null,
-        private val translatedDescription: String? = null
+        private val translatedDescription: String? = null,
+        val urls: Array<UrlData>? = null
 ) {
 
     val current = to.isNullOrEmpty()
@@ -28,6 +30,16 @@ data class Project(
     val description = translatedDescription ?: ""
 }
 
+data class ProjectDetails(
+        val title: String? = null,
+        val description: String? = null,
+        val urls: Array<UrlData>? = null
+)
+
+data class UrlData(
+        val title: String,
+        val url: String
+)
 
 interface WorkTimelineState : RState {
     var projects: Array<Project>
@@ -63,19 +75,30 @@ class WorkTimeline : RComponent<LanguageState, WorkTimelineState>() {
     }
 
     private fun loadTranslatedDetails(projects: Array<Project>, selectedLanguage: String) {
+        console.log("loading projects details: $projects")
         projects.forEachIndexed { index, project ->
-            fetchDataFromJsonFile("data/history/${project.code}/$selectedLanguage.json") {
-                val translatedTitle = it["title"]
-                val translatedDescription = it["description"]
+            fetchDataFromJsonFile<ProjectDetails>("data/history/${project.code}/$selectedLanguage.json") {
+                console.log("Details loaded: $it")
+                val nextStateProjects = state.projects.copyOf()
+                val translatedTitle = it.title
+                val translatedDescription = it.description
                 if (translatedTitle != null || translatedDescription != null) {
                     val projectTranslated = project.copy(
                             translatedTitle = translatedTitle?.toString(),
                             translatedDescription = translatedDescription?.toString()
                     )
-                    val nextStateProjects = state.projects.copyOf()
                     nextStateProjects[index] = projectTranslated
-                    setState { this.projects = nextStateProjects }
                 }
+                it.urls?.let { urls ->
+                    console.log("Updating urls $urls for ${project.code}")
+                    val projectTranslated = project.copy(
+                            urls = urls
+                    )
+                    nextStateProjects[index] = projectTranslated
+                }
+                setState {
+                    console.log("Updating state with updated projects: $nextStateProjects")
+                    this.projects = nextStateProjects }
             }
         }
     }
@@ -91,7 +114,7 @@ class WorkTimeline : RComponent<LanguageState, WorkTimelineState>() {
                         setProp("id", it.code)
                         div("collapsible-header") {
                             div("col s8 l9") {
-                                h5{+it.title}
+                                h5 { +it.title }
                                 it.company?.let {
                                     span("Project-company-name") {
                                         +it
@@ -116,6 +139,16 @@ class WorkTimeline : RComponent<LanguageState, WorkTimelineState>() {
                             }
                             div("white-text") {
                                 parseMarkdown(it.description)
+                                p {
+                                    it?.urls?.let { urls ->
+                                        urls.forEach { u ->
+                                            a(href = u.url, target = "_blank") {
+                                                span("grey-text text-lighten-3"){ +u.title }
+                                            }
+                                            +" "
+                                        }
+                                    }
+                                }
                             }
                         }
                     }

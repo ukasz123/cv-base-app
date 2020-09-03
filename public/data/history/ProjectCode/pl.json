@@ -1,3 +1,13 @@
 {
-  "description": "<Project description>"
+  "description": "Another project description",
+  "urls": [
+    {
+      "title": "<Link title>",
+      "url": "http://example.com"
+    },
+    {
+      "title": "<Second title>",
+      "url": "http://example.com"
+    }
+  ]
 }
