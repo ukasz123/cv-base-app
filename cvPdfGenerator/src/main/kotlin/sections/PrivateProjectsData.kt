@@ -14,7 +14,7 @@ import java.io.File
 data class PrivateProject(
     val title: String,
     val description: String,
-    val repositoryUrl: String,
+    val repositoryUrl: String?,
     val skills: List<String> = emptyList()
 )
 
@@ -31,7 +31,7 @@ fun privateProjectsSection(metadata: CVMeta): Node {
                         listOf(sectionText(translations.getOrError("otherProjects"))),
                         it.projects.mapIndexed { index, it ->
                             Padding(child =
-                            Column(children = listOf(
+                            Column(children = mutableListOf(
                                     Text(it.title, font = defaultBoldFont),
                                     Row(children = it.skills.map { skillName ->
                                         Skills.valueOf(skillName.toUpperCase())
@@ -39,9 +39,11 @@ fun privateProjectsSection(metadata: CVMeta): Node {
                                             weights = (0..it.skills.size - 2)
                                                     .map { 0.075f } + (1f - 0.075f * (it.skills.size - 2))
                                     ),
-                                    Text(it.description, font = defaultFont),
-                                    Text(it.repositoryUrl, font = captionFont)
-                            )),
+                                    Text(it.description, font = defaultFont)
+
+                            ).apply{
+                                it.repositoryUrl?.let{ url-> this.add( Text(url, font = captionFont)) }
+                            }),
                                     padding = Dimensions(top = if (index > 0) 16f else 0f)
                             )
                         }

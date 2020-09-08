@@ -89,8 +89,10 @@ private fun <T : Tag> RDOMBuilder<T>.buildSimpleCard(project: Project) {
         buildSkills(project.skills)
 
         div(classes = "card-action") {
-            a(href = project.repositoryUrl, target = "_blank") {
-                +Translator.getTranslation("repositoryUrl")
+            if (!project.repositoryUrl.isNullOrBlank()) {
+                a(href = project.repositoryUrl, target = "_blank") {
+                    +Translator.getTranslation("repositoryUrl")
+                }
             }
             project.deploymentUrls?.let {
                 generateActionsForDeployments(it, btnClass="btn-flat waves-amber")
@@ -116,9 +118,11 @@ private fun <T : Tag> RDOMBuilder<T>.buildRichCard(project: Project) {
         img(src = project.imageUrl) {
 
         }
-        a(href = project.repositoryUrl, target = "_blank", classes = "btn-floating btn-large halfway-fab amber accent-2") {
-            i(classes = "material-icons") {
-                +"folder"
+        if (!project.repositoryUrl.isNullOrBlank()) {
+            a(href = project.repositoryUrl, target = "_blank", classes = "btn-floating btn-large halfway-fab amber accent-2") {
+                i(classes = "material-icons") {
+                    +"folder"
+                }
             }
         }
     }

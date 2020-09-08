@@ -50,6 +50,18 @@
       ]
     },
     {
+      "title": "Deep Translator",
+      "description": "Wielojęzykowy tłumacz mobilny online i offline wykorzystujący wiele różnych dostępnych API. Posiada funkcję rozpoznawania tekstu z obrazu.",
+      "skills": ["flutter", "android", "kotlin", "javascript"],
+      "imageUrl": "images/deep_translator.png",
+      "deploymentUrls": [
+        {
+          "type": "GOOGLE_PLAY",
+          "url": "https://play.google.com/store/apps/details?id=pl.ukaszapps.deepl.translator"
+        }
+      ]
+    },
+    {
       "title": "Matrix Code Clock",
       "description": "Projekt przeznaczony na \"Flutter Clock Challenge\" - zegar elektroniczny wyświetlający godzinę na tle inspirowanym \"spadającym kodem\" znanym z serii filmów \"Matrix\".",
       "repositoryUrl": "https://github.com/ukasz123/matrix_clock",
