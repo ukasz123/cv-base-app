@@ -1,9 +1,23 @@
 {
   "projects": [
     {
+      "code": "Codeclusive",
+      "name": "Flutter development",
+      "from": "2020-11",
+      "skillsUsed": [
+        "flutter",
+        "dart",
+        "git",
+        "android",
+        "ios"
+      ],
+      "company": "Codeclusive"
+    },
+    {
       "code": "Fyber",
       "name": "Mobile Advertisements Mediation SDK",
       "from": "2018-06",
+      "to": "2020-10",
       "skillsUsed": [
         "android",
         "java",
