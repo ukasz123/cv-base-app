@@ -37,6 +37,18 @@
       ]
     },
     {
+      "title": "Present - katalog książek",
+      "description": "Katalog książek online. Celem było zaprezentowanie zdjęć z książek i obsługa nietypowego sposobu przetwarzania zamówień.",
+      "imageUrl": "images/present-catalogue.png",
+      "skills": ["flutter", "dart", "nodejs", "javascript" ],
+      "deploymentUrls": [
+        {
+          "type": "WEBSITE",
+          "url": "https://present-katalog.web.app/#/"
+        }
+      ]
+    },
+    {
       "title": "FairBid SDK for Flutter plugin",
       "description": "Plugin dla Fluttera dostarczający API do integracji z FairBid SDK - platformy optymalizującej dochody z reklam pochodzących od różnych dostawców.",
       "repositoryUrl": "https://github.com/ukasz123/fairbid_flutter",

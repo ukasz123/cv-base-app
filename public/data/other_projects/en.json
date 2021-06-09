@@ -37,6 +37,18 @@
       ]
     },
     {
+      "title": "Present - book catalogue",
+      "description": "The customized online book catalogue. The main goal was to show book photos in customized way.",
+      "imageUrl": "images/present-catalogue.png",
+      "skills": ["flutter", "dart", "nodejs", "javascript" ],
+      "deploymentUrls": [
+        {
+          "type": "WEBSITE",
+          "url": "https://present-katalog.web.app/#/"
+        }
+      ]
+    },
+    {
       "title": "FairBid SDK for Flutter plugin",
       "description": "Plugin for Flutter that provides FairBid SDK - the advertisement mediation platform.",
       "repositoryUrl": "https://github.com/ukasz123/fairbid_flutter",
