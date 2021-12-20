@@ -1,9 +1,21 @@
 {
   "projects": [
     {
+      "code": "Simpleclub",
+      "name": "Education app",
+      "from": "2021-08",
+      "skillsUsed": [
+        "flutter",
+        "dart",
+        "git"
+      ],
+      "company": "Codete"
+    },
+    {
       "code": "Codeclusive",
       "name": "Flutter development",
       "from": "2020-11",
+      "to": "2021-07",
       "skillsUsed": [
         "flutter",
         "dart",
