@@ -1,11 +1,6 @@
 {
   "skills": [
-    {
-      "name": "Android",
-      "primary": true,
-      "icon": "android",
-      "level": 8
-    },
+
     {
       "name": "Flutter",
       "primary": true,
@@ -19,16 +14,22 @@
       "level": 8
     },
     {
+      "name": "Android",
+      "primary": true,
+      "icon": "android",
+      "level": 6
+    },
+    {
       "name": "Java",
       "primary": true,
       "icon": "java",
-      "level": 7
+      "level": 4
     },
     {
       "name": "Kotlin",
       "primary": true,
       "icon": "kotlin",
-      "level": 7
+      "level": 6
     },
     {
       "name": "RxJava",
@@ -68,7 +69,7 @@
     {
       "name": "Ruby",
       "primary": false,
-      "level": 3
+      "level": 1
     }
   ]
 }
