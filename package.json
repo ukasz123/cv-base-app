@@ -10,8 +10,8 @@
     "react-scripts-kotlin": "2.1.10"
   },
   "scripts": {
-    "build-pdf": "generatePDF.bat",
-    "prebuild": "generatePDF.bat",
+    "build-pdf": "./generatePDF.sh",
+    "prebuild": "./generatePDF.sh",
     "start": "react-scripts-kotlin start",
     "build": "react-scripts-kotlin build",
     "eject": "react-scripts-kotlin eject",

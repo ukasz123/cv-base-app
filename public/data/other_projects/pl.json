@@ -1,13 +1,6 @@
 {
   "projects": [
     {
-      "title": "Szablon CV w HTMLu",
-      "description": "Motywacją do stworzenia własnego CV w wersji HTML była niechęć do aktualizowania wersji PDF. Szablon CV ma mi umożliwić łatwe edytowanie zamieszczonych tam informacji. Przy okazji zamierzałem sprawdzić, jak sprawdza się kompilowanie kodu w Kotlinie do JavaScriptu. Dodatkowo zbudowałem generator CV w formacie PDF i udostępniłem wygenerowane pliki na stronie do pobrania.",
-      "repositoryUrl": "https://bitbucket.org/ukasz123/cv-app-base/src/master/",
-      "skills": ["kotlin", "html5", "css3"],
-      "imageUrl": "images/cv_shot.jpeg"
-    },
-    {
       "title": "Zegar daltoński",
       "description": "Aplikacja mobilna inspirowana zegarem daltońskim napisana we Flutterze.",
       "repositoryUrl": "https://bitbucket.org/ukasz123/dalton_timer/src/master/",
@@ -70,6 +63,24 @@
         {
           "type": "GOOGLE_PLAY",
           "url": "https://play.google.com/store/apps/details?id=pl.ukaszapps.deepl.translator"
+        }
+      ]
+    },
+    {
+      "title": "Szablon CV w HTMLu",
+      "description": "Motywacją do stworzenia własnego CV w wersji HTML była niechęć do aktualizowania wersji PDF. Szablon CV ma mi umożliwić łatwe edytowanie zamieszczonych tam informacji. Przy okazji zamierzałem sprawdzić, jak sprawdza się kompilowanie kodu w Kotlinie do JavaScriptu. Dodatkowo zbudowałem generator CV w formacie PDF i udostępniłem wygenerowane pliki na stronie do pobrania.",
+      "repositoryUrl": "https://bitbucket.org/ukasz123/cv-app-base/src/master/",
+      "skills": ["kotlin", "html5", "css3"],
+      "imageUrl": "images/cv_shot.jpeg"
+    },
+    {
+      "title": "Konsola internetowa domu",
+      "description": "Aplikacja webowa działająca na Raspberry Pi umożliwiająca dostęp do aktualnego stanu domu.",
+      "skills": ["rust", "flutter", "dart"],
+      "deploymentUrls": [
+        {
+          "type": "WEBSITE",
+          "url": "https://hucuhome.ga"
         }
       ]
     },

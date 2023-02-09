@@ -38,7 +38,8 @@ enum class Skills(internal val code: Char) {
   KOTLIN('\uE900'),
   XML('\uEA80'),
   GOOGLE('\uEA88'),
-  IOS('\uEABE')
+  IOS('\uEABE'),
+  RUST('\uE916')
 }
 
 fun techIcon(skill: Skills): Node = Text("${skill.code}", font = techSkillsFont)

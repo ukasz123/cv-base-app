@@ -11,42 +11,42 @@
       "name": "Dart",
       "primary": true,
       "icon": "dart",
-      "level": 8
+      "level": 9
     },
     {
       "name": "Android",
       "primary": true,
       "icon": "android",
-      "level": 6
-    },
-    {
-      "name": "Java",
-      "primary": true,
-      "icon": "java",
-      "level": 4
-    },
-    {
-      "name": "Kotlin",
-      "primary": true,
-      "icon": "kotlin",
-      "level": 6
-    },
-    {
-      "name": "RxJava",
-      "primary": true,
-      "icon": "rxjava",
-      "level": 5
-    },
-    {
-      "name": "Gradle",
-      "primary": true,
-      "icon": "gradle",
       "level": 4
     },
     {
       "name": "Git",
       "primary": true,
       "icon": "git",
+      "level": 4
+    },
+    {
+      "name": "Java",
+      "primary": false,
+      "icon": "java",
+      "level": 4
+    },
+    {
+      "name": "Kotlin",
+      "primary": false,
+      "icon": "kotlin",
+      "level": 6
+    },
+    {
+      "name": "RxJava",
+      "primary": false,
+      "icon": "rxjava",
+      "level": 5
+    },
+    {
+      "name": "Gradle",
+      "primary": false,
+      "icon": "gradle",
       "level": 4
     },
     {
@@ -59,17 +59,6 @@
       "name": "Linux",
       "primary": false,
       "level": 4
-    },
-    {
-      "name": "Xamarin",
-      "primary": false,
-      "level": 1,
-      "icon": "xamarin"
-    },
-    {
-      "name": "Ruby",
-      "primary": false,
-      "level": 1
     }
   ]
 }

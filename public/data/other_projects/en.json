@@ -1,13 +1,6 @@
 {
   "projects": [
     {
-      "title": "HTML CV template",
-      "description": "The main reason to make own CV website was to avoid troublesome updates to PDF CV's version. Thanks to having it as a template I can easily add new infomation whenever I want. Also I have found it a good opportunity to check if Kotlin may be right choice for building web applications. Additionally, I've added PDF generator as a side project and embedded it as a downloadable file on the page.",
-      "repositoryUrl": "https://bitbucket.org/ukasz123/cv-app-base/src/master/",
-      "skills": ["kotlin", "html5", "css3"],
-      "imageUrl": "images/cv_shot.jpeg"
-    },
-    {
       "title": "Dalton Timer",
       "description": "The timer inspired by the tool for the Dalton method. Helps children understand time passing.",
       "repositoryUrl": "https://bitbucket.org/ukasz123/dalton_timer/src/master/",
@@ -70,6 +63,24 @@
         {
           "type": "GOOGLE_PLAY",
           "url": "https://play.google.com/store/apps/details?id=pl.ukaszapps.deepl.translator"
+        }
+      ]
+    },
+    {
+      "title": "HTML CV template",
+      "description": "The main reason to make own CV website was to avoid troublesome updates to PDF CV's version. Thanks to having it as a template I can easily add new infomation whenever I want. Also I have found it a good opportunity to check if Kotlin may be right choice for building web applications. Additionally, I've added PDF generator as a side project and embedded it as a downloadable file on the page.",
+      "repositoryUrl": "https://bitbucket.org/ukasz123/cv-app-base/src/master/",
+      "skills": ["kotlin", "html5", "css3"],
+      "imageUrl": "images/cv_shot.jpeg"
+    },
+    {
+      "title": "Home web console",
+      "description": "Custom application running on Raspberry Pi that provides access to status of my home.",
+      "skills": ["rust", "flutter", "dart"],
+      "deploymentUrls": [
+        {
+          "type": "WEBSITE",
+          "url": "https://hucuhome.ga"
         }
       ]
     },
