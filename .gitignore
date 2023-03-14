@@ -1,31 +1,11 @@
-# See https://help.github.com/ignore-files/ for more about ignoring files.
+# Files and directories created by pub.
+.dart_tool/
+.packages
 
-# dependencies
-**/node_modules
-
-# testing
-**/coverage
-
-# production
-**/build
-
-# misc
-**/.DS_Store
-**/.env.local
-**/.env.development.local
-**/.env.test.local
-**/.env.production.local
-
-**/npm-debug.log*
-**/yarn-debug.log*
-**/yarn-error.log*
-
-# IntelliJ
-**/.idea
-cv.sublime-workspace
-java_1.8_set.sh
-cv-app.iml
-*.css___jb_tmp___
+# Conventional directory for build output.
+build/
+node_modules
 cvPdfGenerator/.gradle
-local.properties
-public/generated/*
+*.freezed.dart
+*.g.dart
+cvPdfGenerator/bin

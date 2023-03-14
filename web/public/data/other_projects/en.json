@@ -1,0 +1,45 @@
+{
+  "projects": [
+    {
+      "title": "<My First Project>",
+      "description": "<The description of the project. Can contain some information about used solutions, the reason behind starting that project, the current state.>",
+      "repositoryUrl": "https://bitbucket.org/ukasz123/cv-app-base/src/master/",
+      "skills": ["java"],
+      "deploymentUrls": [
+        {
+          "type": "WEBSITE",
+          "url": "https://bitbucket.org/ukasz123/cv-app-base/src/master/"
+        },
+        {
+          "type": "APPLE_APPSTORE",
+          "url": "https://bitbucket.org/ukasz123/cv-app-base/src/master/"
+        },
+        {
+          "type": "GOOGLE_PLAY",
+          "url": "https://bitbucket.org/ukasz123/cv-app-base/src/master/"
+        }
+      ]
+    },
+    {
+      "title": "<Second Project>",
+      "description": "<This is showcase of other project properties that may be used to create more appealing project information>",
+      "repositoryUrl": "https://bitbucket.org/ukasz123/cv-app-base/src/master/",
+      "imageUrl": "public/images/project-image.jpeg",
+      "skills": ["java", "kotlin", "android"],
+      "deploymentUrls": [
+        {
+          "type": "WEBSITE",
+          "url": "https://ukasz123.github.com"
+        },
+        {
+          "type": "APPLE_APPSTORE",
+          "url": "https://ukasz123.github.com"
+        },
+        {
+          "type": "GOOGLE_PLAY",
+          "url": "https://ukasz123.github.com"
+        }
+      ]
+    }
+  ]
+}
