@@ -3,6 +3,10 @@
     {
       "title": "<Faculty name>",
       "period": "<Period>"
+    },
+    {
+      "title": "<Another faculty name>",
+      "period": "<Period>"
     }
   ]
 }
