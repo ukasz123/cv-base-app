@@ -1,8 +1,8 @@
-import 'dart:async';
-
 import 'package:cv_app_base/components/copyrights.dart';
 import 'package:cv_app_base/js_interop/pushpin.dart';
+import 'package:cv_app_base/lang_selector.dart';
 import 'package:cv_app_base/navigation.dart';
+import 'package:cv_app_base/pdf_component.dart';
 import 'package:cv_app_base/sections/contact_data.dart';
 import 'package:cv_app_base/sections/education.dart';
 import 'package:cv_app_base/sections/hobbies.dart';
@@ -96,7 +96,7 @@ class _MobileTopBar extends StatelessComponent {
             child: DomComponent(
               tag: 'div',
               classes: ['btn-flat', 'white-text'],
-              child: Text(context.i18n('lang')),
+              child: LangSelector(),
             ),
           ),
           DomComponent(
@@ -105,7 +105,7 @@ class _MobileTopBar extends StatelessComponent {
             child: DomComponent(
               tag: 'div',
               classes: ['btn-flat'],
-              child: Text('TODO: pdfLink'),
+              child: PdfCVLinkComponent(),
             ),
           ),
         ]),
