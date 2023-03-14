@@ -5,6 +5,7 @@ import 'package:cv_app_base/js_interop/pushpin.dart';
 import 'package:cv_app_base/navigation.dart';
 import 'package:cv_app_base/sections/contact_data.dart';
 import 'package:cv_app_base/sections/skills.dart';
+import 'package:cv_app_base/sections/work_timeline.dart';
 import 'package:cv_app_base/translation.dart';
 import 'package:jaspr/html.dart';
 import 'package:jaspr/jaspr.dart';
@@ -22,6 +23,7 @@ class App extends StatelessComponent {
     yield _MobileTopBar();
     yield ContactData();
     yield SkillsSection();
+    yield WorkTimeline();
     yield Copyrights();
   }
 }
@@ -37,7 +39,6 @@ class _LeftPane extends StatelessComponent {
           'contactData',
           'skills',
           'workTimeline',
-          'projects',
           'otherProjects',
           'education',
           'foreignLanguages',

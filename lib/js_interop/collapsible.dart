@@ -6,11 +6,14 @@ import 'package:jaspr/html.dart';
 class Collapsible extends StatefulComponent {
   final String id;
   final Component child;
+  final String tag;
+  final String collapsible;
 
-  Collapsible({
-    required this.id,
-    required this.child,
-  });
+  Collapsible(
+      {required this.id,
+      required this.child,
+      this.tag = 'div',
+      this.collapsible = 'accordion'});
 
   @override
   State<Collapsible> createState() => _CollapsibleState();
@@ -27,9 +30,13 @@ class _CollapsibleState extends State<Collapsible> {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield div(
-      [component.child],
+    yield DomComponent(
+      tag: component.tag,
+      child: component.child,
       classes: ['collapsible'],
+      attributes: {
+        'data-collapsible': component.collapsible,
+      },
       id: component.id,
     );
   }

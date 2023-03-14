@@ -37,9 +37,21 @@ class Project with _$Project {
 class ProjectDescription with _$ProjectDescription {
   const factory ProjectDescription({
     required String title,
-    required String description,
+    String? description,
+    List<ProjectUrl>? urls,
   }) = _ProjectDescription;
 
   factory ProjectDescription.fromJson(Map<String, dynamic> json) =>
       _$ProjectDescriptionFromJson(json);
+}
+
+@freezed
+class ProjectUrl with _$ProjectUrl {
+  factory ProjectUrl({
+    required String title,
+    required String url,
+  }) = _ProjectUrl;
+
+  factory ProjectUrl.fromJson(Map<String, dynamic> json) =>
+      _$ProjectUrlFromJson(json);
 }
