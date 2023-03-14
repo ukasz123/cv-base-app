@@ -13,6 +13,12 @@
       "level": 4
     },
     {
+      "name": "Rust",
+      "primary": true,
+      "icon": "rust",
+      "level": 4
+    },
+    {
       "name": "Python",
       "primary": false,
       "icon": "python",
@@ -23,6 +29,11 @@
       "primary": false,
       "icon": "sqlite",
       "level": 4
+    },
+    {
+      "name": "SQL",
+      "primary": false,
+      "level": 3
     },
     {
       "name": "Linux",

@@ -1,3 +1,13 @@
+/* global variables */
+:root{
+	/* color palette (Classy Palette for #7061A8 from mycolor.space) */
+	--base-violet: #7061A8;
+	--gravel: #494454;
+	--spun-pearl: #AEA9BA;
+	--blossom: #AA5048;
+	--coral: #E58478;
+}
+
 .techs b {
 	font-size: 1.0rem;
 	margin-right: 0.4rem;
@@ -9,7 +19,10 @@
 	    margin-right: 0.6rem;
     }
 }
-
+html, body {
+    height: 100%;
+  }
+  
 #tableOfContents {
     width: 20%;
 }
@@ -60,4 +73,33 @@
 .projectCardImage {
     height: 120px;
     width: 100%;
+}
+
+
+.App-header {
+	background-color: #000;
+	height: 160px;
+	padding: 20px;
+	color: white;
+  }
+  
+  .App-intro {
+	font-size: large;
+  }
+  
+  .App-ticker {
+	font-size: medium;
+  }
+  
+  .Copyrights {
+	  margin-top: -3em;
+	  font-size: small;
+  }
+
+  .lang-selected {
+    /* flag icons have height of 17 px */
+    height: 20px;
+}
+.pdf-icon {
+    width: 30px;
 }
