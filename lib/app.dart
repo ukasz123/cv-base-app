@@ -4,6 +4,7 @@ import 'package:cv_app_base/components/copyrights.dart';
 import 'package:cv_app_base/js_interop/pushpin.dart';
 import 'package:cv_app_base/navigation.dart';
 import 'package:cv_app_base/sections/contact_data.dart';
+import 'package:cv_app_base/sections/other_projects.dart';
 import 'package:cv_app_base/sections/skills.dart';
 import 'package:cv_app_base/sections/work_timeline.dart';
 import 'package:cv_app_base/translation.dart';
@@ -24,6 +25,7 @@ class App extends StatelessComponent {
     yield ContactData();
     yield SkillsSection();
     yield WorkTimeline();
+    yield OtherProjects();
     yield Copyrights();
   }
 }

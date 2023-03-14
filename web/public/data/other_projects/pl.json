@@ -24,7 +24,7 @@
       "title": "<Second Project>",
       "description": "<This is showcase of other project properties that may be used to create more appealing project information>",
       "repositoryUrl": "https://bitbucket.org/ukasz123/cv-app-base/src/master/",
-      "imageUrl": "images/project-image.jpeg",
+      "imageUrl": "public/images/project-image.jpeg",
       "skills": ["java", "kotlin", "android"],
       "deploymentUrls": [
         {
