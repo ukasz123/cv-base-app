@@ -53,8 +53,14 @@ class _LeftPane extends StatelessComponent {
           'hobbies',
         ],
         languageOptions: [
-          MapEntry('pl', () {}),
-          MapEntry('en', () {}),
+          MapEntry('pl', () {
+            context.read(selectedLanguageProvider.notifier).state =
+                SupportedLanguages.pl;
+          }),
+          MapEntry('en', () {
+            context.read(selectedLanguageProvider.notifier).state =
+                SupportedLanguages.en;
+          }),
         ],
         selectedLang: context.watch(selectedLanguageProvider),
       ),
