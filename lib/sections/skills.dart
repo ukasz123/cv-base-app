@@ -6,7 +6,7 @@ import 'package:jaspr/html.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 
-class SkillsSection extends StatelessComponent {
+class Skills extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield ContentSection(
