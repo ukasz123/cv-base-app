@@ -11,7 +11,7 @@ String hobbiesToJson(Hobbies data) => json.encode(data.toJson());
 @freezed
 class Hobbies with _$Hobbies {
   const factory Hobbies({
-    List<Hobby>? hobbies,
+    required List<Hobby> hobbies,
   }) = _Hobbies;
 
   factory Hobbies.fromJson(Map<String, dynamic> json) =>
