@@ -1,5 +1,8 @@
-# See https://help.github.com/ignore-files/ for more about ignoring files.
+# Files and directories created by pub.
+.dart_tool/
+.packages
 
+<<<<<<< HEAD
 # dependencies
 **/node_modules
 
@@ -33,3 +36,12 @@ local.properties
 public/generated/*
 cvPdfGenerator/out
 graphics/*.png
+=======
+# Conventional directory for build output.
+build/
+node_modules
+cvPdfGenerator/.gradle
+*.freezed.dart
+*.g.dart
+cvPdfGenerator/bin
+>>>>>>> f220b4143492f1d0ede5b106bee8321fca6c3377

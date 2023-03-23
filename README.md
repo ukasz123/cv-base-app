@@ -23,7 +23,10 @@ Open Sources:
 * Language icons comes from [Stripe Flag Set](https://www.iconfinder.com/iconsets/stripe-flag-set) by [Benjamin De Cock](http://dribbble.com/bdc)
 
 ### Private data
-Add `private/data` folder with the same structure as `public/data`. All entries are optional.
+Add `web/private/data` folder with the same structure as `web/public/data`. All entries are optional.
+
+
+#### Obsolete (Kotlin) README.md part
 
 Known common problems:
 > TypeError: Kotlin.defineModule is not a function
@@ -125,4 +128,3 @@ Then select `Debug in Chrome` from the list of run/debug configurations on the t
 Currently, debugging is supported only in IntelliJ IDEA Ultimate 2017.3.
 
 You can also debug your application using the developer tools in your browser.
-

@@ -1,0 +1,75 @@
+{
+  "skills": [
+
+    {
+      "name": "Flutter",
+      "primary": true,
+      "icon": "flutter",
+      "level": 9
+    },
+    {
+      "name": "Dart",
+      "primary": true,
+      "icon": "dart",
+      "level": 9
+    },
+    {
+      "name": "Android",
+      "primary": true,
+      "icon": "android",
+      "level": 4
+    },
+    {
+      "name": "Rust",
+      "primary": true,
+      "icon": "rust",
+      "level": 2
+    },
+    {
+      "name": "Git",
+      "primary": true,
+      "icon": "git",
+      "level": 4
+    },
+    {
+      "name": "Java",
+      "primary": false,
+      "icon": "java",
+      "level": 4
+    },
+    {
+      "name": "Kotlin",
+      "primary": false,
+      "icon": "kotlin",
+      "level": 6
+    },
+    {
+      "name": "RxJava",
+      "primary": false,
+      "icon": "rxjava",
+      "level": 5
+    },
+    {
+      "name": "Gradle",
+      "primary": false,
+      "icon": "gradle",
+      "level": 4
+    },
+    {
+      "name": "SQLite",
+      "primary": false,
+      "icon": "sqlite",
+      "level": 3
+    },
+    {
+      "name": "SQL",
+      "primary": false,
+      "level": 3
+    },
+    {
+      "name": "Linux",
+      "primary": false,
+      "level": 4
+    }
+  ]
+}

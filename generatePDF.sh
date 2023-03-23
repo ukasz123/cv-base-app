@@ -1,4 +1,4 @@
 #!/bin/bash
 cd cvPdfGenerator
 chmod u+x ./gradlew
-./gradlew :generatePDF -Pbase=../
+./gradlew :generatePDF -Pbase=../web/
