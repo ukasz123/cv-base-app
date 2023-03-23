@@ -50,6 +50,6 @@ final _projectDescriptionProvider =
 final projectDescriptionProvider = Provider.family<ProjectDescription, Project>(
   (ref, project) => ref.watch(_projectDescriptionProvider(project)).maybeWhen(
         orElse: () => ProjectDescription(title: project.name),
-        data: (data) => data,
+        data: (data) => data.copyWith(title: data.title ?? project.name),
       ),
 );
