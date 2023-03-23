@@ -20,6 +20,12 @@
       "level": 4
     },
     {
+      "name": "Rust",
+      "primary": true,
+      "icon": "rust",
+      "level": 2
+    },
+    {
       "name": "Git",
       "primary": true,
       "icon": "git",

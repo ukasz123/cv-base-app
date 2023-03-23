@@ -18,8 +18,8 @@ enum class SkillNames(val code: String, val title: String) {
     Xamarin("xamarin", "Xamarin"),
     Flutter("flutter", title = "Flutter"),
     iOS("ios", title ="iOS"),
-    Dart(code = "dart", title = "Dart");
-
+    Dart(code = "dart", title = "Dart"),
+    Rust(code = "rust", title = "Rust"),
 }
 internal fun forCode(code: String): SkillNames? {
     return SkillNames.values().find { it.code == code }
