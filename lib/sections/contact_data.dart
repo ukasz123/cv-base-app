@@ -69,7 +69,7 @@ class ContactData extends StatelessComponent {
                                 ],
                               )
                             ],
-                            href: data.linkedin,
+                            href: data.github,
                             classes: ['waves-effect', 'waves-lime', 'btn-flat'],
                           ),
                           a(
@@ -82,7 +82,7 @@ class ContactData extends StatelessComponent {
                                 ],
                               )
                             ],
-                            href: data.linkedin,
+                            href: data.bitbucket,
                             classes: ['waves-effect', 'waves-lime', 'btn-flat'],
                           ),
                         ]
