@@ -11,7 +11,7 @@ class Hobbies extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield ContentSection(
         id: 'hobbies',
-        classes: ['orange', 'darken-1'],
+        classes: ['bg-gravel'],
         child: Builder(builder: (context) sync* {
           yield ContentTitle(context.i18n('hobbies'));
           yield ul(

@@ -12,7 +12,7 @@ class ForeignLanguages extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield ContentSection(
       id: 'foreignLanguages',
-      classes: ['teal', 'darken -1'],
+      classes: ['bg-coral'],
       child: Builder(builder: (context) sync* {
         yield ContentTitle(context.i18n('foreignLanguages'));
         yield ul(context.watch(languagesProvider).maybeWhen(

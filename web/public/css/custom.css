@@ -8,6 +8,27 @@
 	--coral: #E58478;
 }
 
+.bg-violet {
+	background-color: var(--base-violet);
+}
+
+.bg-gravel {
+	background-color: var(--gravel);
+}
+
+.bg-spun-pearl {
+	background-color: var(--spun-pearl);
+}
+
+.bg-blossom {
+	background-color: var(--blossom);
+}
+
+.bg-coral {
+	background-color: var(--coral);
+}
+
+
 .techs b {
 	font-size: 1.0rem;
 	margin-right: 0.4rem;

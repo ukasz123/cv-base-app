@@ -15,7 +15,7 @@ class ContactData extends StatelessComponent {
     yield Scrollspy(
       id: 'contactData',
       child: ContentSection(
-        classes: ['teal', 'darken-3'],
+        classes: ['bg-violet'],
         child: Builder(
           builder: (context) sync* {
             yield ContentTitle(context.i18n('contactData'));

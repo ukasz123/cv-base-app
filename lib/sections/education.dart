@@ -11,7 +11,7 @@ class Education extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield ContentSection(
         id: 'education',
-        classes: ['purple', 'darken-4'],
+        classes: ['bg-violet'],
         child: Builder(builder: (context) sync* {
           yield ContentTitle(context.i18n('education'));
           yield ul(

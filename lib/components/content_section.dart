@@ -13,7 +13,7 @@ class ContentSection extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield Div(
-      classes: ['scrollspy', 'fullHeight', 'valign-wrapper', ..._classes],
+      classes: ['fullHeight', 'valign-wrapper', ..._classes],
       id: id,
       child: ContentPadding(child),
     );

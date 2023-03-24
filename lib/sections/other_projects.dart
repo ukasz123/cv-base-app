@@ -4,7 +4,6 @@ import 'package:cv_app_base/models/other_projects.dart';
 import 'package:cv_app_base/providers/other_projects.dart';
 import 'package:cv_app_base/translation.dart';
 import 'package:jaspr/html.dart';
-import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 
 class OtherProjects extends StatelessComponent {
@@ -12,7 +11,7 @@ class OtherProjects extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield ContentSection(
         id: 'otherProjects',
-        classes: ['amber', 'darken-1'],
+        classes: ['bg-spun-pearl'],
         child: Builder(builder: (context) sync* {
           yield ContentTitle(context.i18n('otherProjects'));
           yield div(
