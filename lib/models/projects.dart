@@ -36,7 +36,7 @@ class Project with _$Project {
 @freezed
 class ProjectDescription with _$ProjectDescription {
   const factory ProjectDescription({
-    required String title,
+    String? title,
     String? description,
     List<ProjectUrl>? urls,
   }) = _ProjectDescription;

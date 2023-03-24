@@ -1,5 +1,4 @@
 import 'package:jaspr/html.dart';
-import 'package:jaspr/jaspr.dart';
 
 // TODO: use actually valid markdown parser
 class MarkdownComponent extends StatelessComponent {
@@ -13,27 +12,38 @@ class MarkdownComponent extends StatelessComponent {
       [
         Builder(builder: (context) sync* {
           final blocks = markdown.split('\n');
-          var i = 0;
-          while (i < blocks.length) {
-            final line = blocks[i];
-            if (line.startsWith(' *')) {
-              yield ul([
-                Builder(builder: (context) sync* {
-                  while (i < blocks.length && blocks[i].startsWith(' *')) {
-                    yield li([text(blocks[i].substring(2))]);
-                    i++;
-                  }
-                })
-              ], classes: [
-                'browser-default'
-              ]);
-            } else {
-              yield p([text(line)]);
-              i++;
-            }
-          }
+          yield* parseMarkdown(blocks);
         })
       ],
     );
+  }
+}
+
+Iterable<Component> parseMarkdown(List<String> input) sync* {
+  List<Component>? lastULElements;
+
+  for (var i = 0; i < input.length; i++) {
+    final line = input[i];
+    if (line.startsWith(' *')) {
+      lastULElements ??= [];
+
+      lastULElements.add(li([text(line.substring(2))]));
+    } else {
+      if (lastULElements != null) {
+        yield ul(
+          lastULElements,
+          classes: ['browser-default'],
+        );
+        lastULElements = null;
+      }
+      yield p([text(line)]);
+    }
+  }
+  if (lastULElements != null) {
+    yield ul(
+      lastULElements,
+      classes: ['browser-default'],
+    );
+    lastULElements = null;
   }
 }

@@ -26,8 +26,6 @@ class WorkTimeline extends StatelessComponent {
                       .map(
                         (project) => Builder.single(
                           builder: (context) {
-                            final description = context
-                                .watch(projectDescriptionProvider(project));
                             return li(
                               [
                                 _ProjectListItemContent(project),
@@ -68,7 +66,7 @@ class _ProjectListItemContent extends StatelessComponent {
     final description = context.watch(projectDescriptionProvider(project));
     yield div([
       div([
-        h5([text(description.title)]),
+        h5([text(description.title ?? project.name)]),
         if (project.company != null)
           span([text(project.company!)], styles: _companyNameStyle),
       ], classes: [
