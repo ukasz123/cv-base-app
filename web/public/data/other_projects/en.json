@@ -42,6 +42,17 @@
       ]
     },
     {
+      "title": "Home web console",
+      "description": "Custom application running on Raspberry Pi that provides access to status of my home.",
+      "skills": ["rust", "flutter", "dart"],
+      "deploymentUrls": [
+        {
+          "type": "WEBSITE",
+          "url": "https://hucuhome.ga"
+        }
+      ]
+    },
+    {
       "title": "FairBid SDK for Flutter plugin",
       "description": "Plugin for Flutter that provides FairBid SDK - the advertisement mediation platform.",
       "repositoryUrl": "https://github.com/ukasz123/fairbid_flutter",
@@ -72,17 +83,6 @@
       "repositoryUrl": "https://bitbucket.org/ukasz123/cv-app-base/src/master/",
       "skills": ["kotlin", "html5", "css3"],
       "imageUrl": "images/cv_shot.jpeg"
-    },
-    {
-      "title": "Home web console",
-      "description": "Custom application running on Raspberry Pi that provides access to status of my home.",
-      "skills": ["rust", "flutter", "dart"],
-      "deploymentUrls": [
-        {
-          "type": "WEBSITE",
-          "url": "https://hucuhome.ga"
-        }
-      ]
     },
     {
       "title": "Matrix Code Clock",

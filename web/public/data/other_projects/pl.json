@@ -42,6 +42,17 @@
       ]
     },
     {
+      "title": "Konsola internetowa domu",
+      "description": "Aplikacja webowa działająca na Raspberry Pi umożliwiająca dostęp do aktualnego stanu domu.",
+      "skills": ["rust", "flutter", "dart"],
+      "deploymentUrls": [
+        {
+          "type": "WEBSITE",
+          "url": "https://hucuhome.ga"
+        }
+      ]
+    },
+    {
       "title": "FairBid SDK for Flutter plugin",
       "description": "Plugin dla Fluttera dostarczający API do integracji z FairBid SDK - platformy optymalizującej dochody z reklam pochodzących od różnych dostawców.",
       "repositoryUrl": "https://github.com/ukasz123/fairbid_flutter",
@@ -72,17 +83,6 @@
       "repositoryUrl": "https://bitbucket.org/ukasz123/cv-app-base/src/master/",
       "skills": ["kotlin", "html5", "css3"],
       "imageUrl": "public/images/cv_shot.jpeg"
-    },
-    {
-      "title": "Konsola internetowa domu",
-      "description": "Aplikacja webowa działająca na Raspberry Pi umożliwiająca dostęp do aktualnego stanu domu.",
-      "skills": ["rust", "flutter", "dart"],
-      "deploymentUrls": [
-        {
-          "type": "WEBSITE",
-          "url": "https://hucuhome.ga"
-        }
-      ]
     },
     {
       "title": "Matrix Code Clock",
