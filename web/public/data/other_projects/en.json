@@ -33,7 +33,7 @@
       "title": "Present - book catalogue",
       "description": "The customized online book catalogue. The main goal was to show book photos in customized way.",
       "imageUrl": "images/present-catalogue.png",
-      "skills": ["flutter", "dart", "nodejs", "javascript" ],
+      "skills": ["flutter", "dart", "nodejs", "javascript"],
       "deploymentUrls": [
         {
           "type": "WEBSITE",
@@ -51,6 +51,13 @@
           "url": "https://hucuhome.ga"
         }
       ]
+    },
+    {
+      "title": "My Drive",
+      "description": "File hosting service. The aim was to verify the feasibility of building a web application without JavaScript using the HTMX library. The service allows browsing, downloading and sharing of files. Installed and running on a Raspberry Pi.",
+      "skills": ["rust", "html5"],
+      "imageUrl": "public/images/my-drive.png",
+      "repositoryUrl": "https://github.com/ukasz123/my-drive"
     },
     {
       "title": "FairBid SDK for Flutter plugin",
@@ -90,7 +97,7 @@
       "repositoryUrl": "https://github.com/ukasz123/matrix_clock",
       "skills": ["flutter"],
       "imageUrl": "https://github.com/ukasz123/matrix_clock/raw/master/screenshots/clock.png",
-      "deploymentUrls" : [
+      "deploymentUrls": [
         {
           "type": "WEBSITE",
           "url": "matrix-clock/index.html"
