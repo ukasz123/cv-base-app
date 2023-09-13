@@ -3,7 +3,6 @@ import 'package:cv_app_base/components/content_title.dart';
 import 'package:cv_app_base/providers/hobbies.dart';
 import 'package:cv_app_base/translation.dart';
 import 'package:jaspr/html.dart';
-import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 
 class Hobbies extends StatelessComponent {

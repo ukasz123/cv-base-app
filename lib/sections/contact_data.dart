@@ -34,16 +34,17 @@ class ContactData extends StatelessComponent {
                           'responsive-img',
                         ],
                       ),
+                      content: p([text(data.name)]),
                     );
                     yield SimpleListItem(
                         text: context.i18n('address'),
                         icon: Text('place'),
                         content: p([Text(data.address)]),
-                        classes: ['indigo']);
+                        classes: ['cyan', 'lighten-2']);
                     yield SimpleListItem(
                       text: context.i18n('social'),
                       icon: Text('public'),
-                      classes: ['lime-darken'],
+                      classes: ['teal','lighten-2'],
                       content: div(
                         [
                           a(

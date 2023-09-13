@@ -48,7 +48,7 @@
       "deploymentUrls": [
         {
           "type": "WEBSITE",
-          "url": "https://hucuhome.ga"
+          "url": "https://hucuhome.mooo.com/"
         }
       ]
     },
@@ -79,9 +79,9 @@
     },
     {
       "title": "Szablon CV w HTMLu",
-      "description": "Motywacją do stworzenia własnego CV w wersji HTML była niechęć do aktualizowania wersji PDF. Szablon CV ma mi umożliwić łatwe edytowanie zamieszczonych tam informacji. Przy okazji zamierzałem sprawdzić, jak sprawdza się kompilowanie kodu w Kotlinie do JavaScriptu. Dodatkowo zbudowałem generator CV w formacie PDF i udostępniłem wygenerowane pliki na stronie do pobrania.",
+      "description": "Motywacją do stworzenia własnego CV w wersji HTML była niechęć do aktualizowania wersji PDF. Szablon CV ma mi umożliwić łatwe edytowanie zamieszczonych tam informacji. Przy okazji zamierzałem sprawdzić, jak sprawdza się kompilowanie kodu w Kotlinie do JavaScriptu. Dodatkowo zbudowałem generator CV w formacie PDF i udostępniłem wygenerowane pliki na stronie do pobrania. W momencie, gdy React Kotlin App przestało budować projekt, zdecydowałem się na przepisanie projektu z wykorzystaniem Dart i biblioteki jaspr.",
       "repositoryUrl": "https://bitbucket.org/ukasz123/cv-app-base/src/master/",
-      "skills": ["kotlin", "html5", "css3"],
+      "skills": ["dart", "kotlin", "html5", "css3"],
       "imageUrl": "public/images/cv_shot.jpeg"
     },
     {
