@@ -17,61 +17,29 @@ class NavigationPanel extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield DomComponent(
-      tag: 'div',
-      classes: ['fullHeight'],
-      child: DomComponent(
-        tag: 'div',
-        classes: ['container', 'push-down'],
-        children: [
-          div([
-            h5(
-              [Text(context.i18n('cvTitle'))],
-              classes: ['brand-logo', 'white-text'],
+        tag: 'nav',
+        child: DomComponent(tag: 'ul', children: [
+          li([
+            a([
+              h1([Text(context.i18n('cvTitle'))])
+            ], href: '#${anchors.first}'),
+            div(
+              [LangSelector()],
+              classes: ['lang-selector', 'middle'],
             ),
           ]),
-          Builder(
-            builder: (context) sync* {
-              yield TableOfContents(anchors);
-            },
-          ),
-
+          ...anchors.skip(1).map((e) => li([
+                a(
+                  [text(context.i18n(e))],
+                  href: '#$e',
+                )
+              ])),
           // pdf link
-          div([
-            div([PdfCVLinkComponent()], classes: ['center-align']),
-          ], classes: [
-            'row'
-          ]),
-          // lang selector
-          div([LangSelector()], classes: ['row'])
-        ],
-      ),
-    );
-  }
-}
-
-class TableOfContents extends StatelessComponent {
-  final List<String> anchors;
-
-  TableOfContents(this.anchors);
-
-  @override
-  Iterable<Component> build(BuildContext context) {
-    return [
-      DomComponent(
-        tag: 'ul',
-        classes: ['section', 'table-of-contents'],
-        child: Builder(
-          builder: (innerContext) => anchors.map(
-            (code) => li([
-              a(
-                [text(innerContext.i18n(code))],
-                href: '#$code',
-                classes: ['white-text'],
-              ),
-            ]),
+          li([PdfCVLinkComponent()]),
+          li(
+            [LangSelector()],
+            classes: ['lang-selector', 'tail'],
           ),
-        ),
-      ),
-    ];
+        ]));
   }
 }

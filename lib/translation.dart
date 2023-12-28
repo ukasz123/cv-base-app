@@ -16,7 +16,7 @@ final selectedLanguageProvider =
 final _currentTranslationProvider =
     FutureProvider<Map<String, String>>((ref) async {
   final translationFilePath =
-      "public/data/translations.${ref.watch(selectedLanguageProvider).name}.json";
+      'public/data/translations.${ref.watch(selectedLanguageProvider).name}.json';
   final translationContentResponse = await get(Uri(path: translationFilePath));
   if (translationContentResponse.statusCode == 200) {
     final stringContent = Utf8Decoder().convert(translationContentResponse.bodyBytes);

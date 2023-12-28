@@ -7,6 +7,3 @@ targets:
       source_gen:combining_builder:
         generate_for:
           - lib/models/**.dart
-      jaspr_builder:apps:
-        generate_for:
-          - lib/*.dart

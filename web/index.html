@@ -2,70 +2,37 @@
 
 <html>
 
-<head>
+<head>        
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="scaffolded-by" content="https://github.com/dart-lang/sdk">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
+    <meta name="theme-color" content="#000000">
+    
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import Google Noto Sans Display Font-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display">
     <!--Import FontAwesome fonts-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
         integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 
     <!--Import custom fonts (from Icomoon)-->
-    <link rel="stylesheet" type="text/css" href="public/css/font-tech/style.css" />
+    <link rel="stylesheet" type="text/css" href="public/css/font-tech/style.css">
 
-    <link rel="stylesheet" type="text/css" href="public/css/font-social/style.css" />
-
-    <!-- Materialize -->
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="public/css/font-social/style.css">
 
     <!-- Custom styles -->
-    <link rel="stylesheet" type="text/css" href="public/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="public/css/custom.css">
 
     <title>CV App Base</title>
     <script defer src="main.dart.js"></script>
 </head>
 
-<body></body>
-
-<script type="text/javascript">
-
-    function pushpinInit(id) {
-        var elems = document.querySelectorAll(`#${id}`);
-        var instances = M.Pushpin.init(elems, {});
-    }
+<body>
     
-    function scrollspyInit(id) {
-        var elems = document.querySelectorAll(`#${id}.scrollspy`);
-        var instances = M.ScrollSpy.init(elems, { scrollOfset: 0 });
-    }
+</body>
 
-    function collapsibleInit(id) {
-
-        var elems = document.querySelectorAll(`#${id}.collapsible`);
-        var instances = M.Collapsible.init(elems, {});
-    }
-
-    <!-- Materialize JS plugins initialization -->
-    document.addEventListener('DOMContentLoaded', function () {
-        var elems = document.querySelectorAll('.scrollspy');
-        var instances = M.ScrollSpy.init(elems, { scrollOfset: 0 });
-        var elems = document.querySelectorAll('.collapsible');
-        var instances = M.Collapsible.init(elems, {});
-        var elems = document.querySelectorAll('.tableOfContents');
-console.log(`table of contents = ${JSON.stringify(elems)}`);
-        var instances = M.Pushpin.init(elems, {});
-    });
-
-    
-</script>
 
 </html>

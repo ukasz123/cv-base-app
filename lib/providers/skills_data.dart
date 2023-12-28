@@ -16,20 +16,14 @@ final _skillsDataProvider = FutureProvider<Skills>((ref) async {
   throw Exception("Can't load skills.");
 });
 
-final skillsProvider = Provider<AsyncValue<List<List<Skill>>>>((ref) {
+final skillsProvider = Provider<AsyncValue<List<Skill>>>((ref) {
   return ref.watch(_skillsDataProvider).whenData((skillsData) {
     final skills = skillsData.skills.toList()
       ..sort(
         ((a, b) => -a.level.compareTo(b.level)),
       );
 
-    final primarySkills = skills.where((skill) => skill.primary);
-    final secondarySkills = skills.where((skill) => !skill.primary);
-
-    return [
-      ...primarySkills.windowed(3),
-      ...secondarySkills.windowed(4),
-    ];
+    return skills;
   });
 });
 

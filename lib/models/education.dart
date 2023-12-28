@@ -11,6 +11,7 @@ String educationToJson(Education data) => json.encode(data.toJson());
 @freezed
 class Education with _$Education {
   const factory Education({
+    // ignore: invalid_annotation_target
     @JsonKey(name: 'college_studies')
     required List<CollegeStudy> collegeStudies,
   }) = _Education;

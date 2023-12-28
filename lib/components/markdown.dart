@@ -8,14 +8,8 @@ class MarkdownComponent extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield div(
-      [
-        Builder(builder: (context) sync* {
-          final blocks = markdown.split('\n');
-          yield* parseMarkdown(blocks);
-        })
-      ],
-    );
+    final blocks = markdown.split('\n');
+    yield* parseMarkdown(blocks);
   }
 }
 
@@ -27,12 +21,13 @@ Iterable<Component> parseMarkdown(List<String> input) sync* {
     if (line.startsWith(' *')) {
       lastULElements ??= [];
 
-      lastULElements.add(li([text(line.substring(2))]));
+      lastULElements.add(li([
+        span([text(line.substring(2))])
+      ]));
     } else {
       if (lastULElements != null) {
         yield ul(
           lastULElements,
-          classes: ['browser-default'],
         );
         lastULElements = null;
       }
@@ -42,7 +37,6 @@ Iterable<Component> parseMarkdown(List<String> input) sync* {
   if (lastULElements != null) {
     yield ul(
       lastULElements,
-      classes: ['browser-default'],
     );
     lastULElements = null;
   }

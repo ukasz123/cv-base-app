@@ -1,7 +1,7 @@
 {
 	"contactSection" : "Contact data",
 	"skills": "Skills",
-	"workTimeline": "Timeline",
+	"workTimeline": "Work timeline",
 	"education": "Education",
 	"foreignLanguages" : "Foreign languages",
 	"hobbies": "Hobbies",
@@ -13,8 +13,10 @@
 	"projects": "Projects",
 	"now": "now",
 	"cvTitle": "<Your title>",
+	"downloadCV":"Download CV",
 	"social": "My Places",
 	"otherProjects": "Other projects",
 	"repositoryUrl": "Sources",
-	"seeMore": "See also"
+	"seeMore": "See also",
+	"technologies": "Technologies"
 }

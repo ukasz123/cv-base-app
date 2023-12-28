@@ -1,21 +1,21 @@
-import 'package:cv_app_base/components/content_padding.dart';
-import 'package:cv_app_base/components/div.dart';
-import 'package:jaspr/jaspr.dart';
+import 'package:jaspr/html.dart';
 
 class ContentSection extends StatelessComponent {
   final String? id;
-  final List<String> _classes;
+  final String? title;
   final Component child;
 
-  ContentSection({this.id, List<String>? classes, required this.child})
-      : _classes = classes ?? [];
+  ContentSection(
+      {this.id, List<String>? classes, this.title, required this.child});
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield Div(
-      classes: ['scrollspy', 'fullHeight', 'valign-wrapper', ..._classes],
+    yield section(
+      [
+        if (title != null) h1([Text(title!)]),
+        child,
+      ],
       id: id,
-      child: ContentPadding(child),
     );
   }
 }
