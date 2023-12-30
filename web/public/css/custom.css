@@ -13,7 +13,7 @@
 	--main-fg: #293241;
 	--cta-bg: #EE6C4D;
 	--cta-fg: #333333;
-	--display-fg: #333333
+	--display-fg: #333333;
 
 	--sans: 'Open Sans', sans-serif;
 	--display: 'Noto Sans Display', sans-serif;
@@ -242,7 +242,7 @@ section h1:first-child {
 
 #contactData div img {
 	flex-basis: 20%;
-	margin-right: 2rem;
+	max-width: 420px;
 }
 
 #contactData ul {
@@ -310,6 +310,9 @@ dd {
 	font-size: calc(var(--size) * 0.3rem + 0.75rem);
 }
 
+#skills ul li strong::before {
+	content: ' ';
+}
 /* defining weights */
 #skills ul li[data-weight="1"] {
 	--size: 1;
@@ -400,10 +403,6 @@ h4 {
 	font-size: 90%;
 	font-weight: normal;
 	padding-top: 1rem;
-}
-
-#workTimeline article:nth-child(odd) ul {
-	color: var(--technology-icon-fg-odd);
 }
 
 footer {
