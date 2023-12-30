@@ -1,16 +1,15 @@
 plugins {
     id 'java'
     id 'application'
-    id 'org.jetbrains.kotlin.jvm' version '1.3.21'
+    id 'org.jetbrains.kotlin.jvm' version '1.8.20'
 }
 
 group 'pl.ukaszapps.cv-app'
-version '1.0-SNAPSHOT'
+version '1.1-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
 repositories {
-    jcenter()
     mavenCentral()
 }
 ext {
@@ -24,15 +23,18 @@ task generatePDF(type: JavaExec) {
     args = [ project.findProperty('base') ?: '']
 }
 
-def itext_pdf_generator_version = '5.5.13.1'
-def moshi_version = '1.9.2'
+def itext_pdf_generator_version = '5.5.13.+'
+def moshi_version = '1.15.+'
+def markdown_version = '0.6.1'
+
 dependencies {
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
     implementation "com.itextpdf:itextpdf:$itext_pdf_generator_version"
+    implementation "com.itextpdf.tool:xmlworker:$itext_pdf_generator_version"
     implementation "com.squareup.moshi:moshi-kotlin:$moshi_version"
-
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation "org.jetbrains:markdown:$markdown_version"
+    implementation "org.jetbrains:markdown-jvm:$markdown_version"
 }
 
 compileKotlin {

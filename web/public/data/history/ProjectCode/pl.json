@@ -1,6 +1,6 @@
 {
   "title": "<Project Code>",
-  "description": "Another project description",
+  "description": "Another project description. This one _is using_ **markdown**!\n* First item,\n* Second item,\n* list works!",
   "urls": [
     {
       "title": "<Link title>",

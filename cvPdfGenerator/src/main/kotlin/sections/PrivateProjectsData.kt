@@ -2,9 +2,9 @@ package sections
 
 import CVMeta
 import pl.ukaszapps.itext.nodes.*
+import pl.ukaszapps.markdown.MarkdownRenderer
 import sections.common.*
 import sections.common.defaultBoldFont
-import sections.common.defaultFont
 import sections.common.getOrError
 import sections.common.parse
 import sections.icons.Skills
@@ -25,11 +25,11 @@ fun privateProjectsSection(metadata: CVMeta): Node {
     val privateProjectsFile = File(metadata.publicDataBaseDir, "data/other_projects/${metadata.lang}.json")
     val privateProjectsData = parse<PrivateProjects>(privateProjectsFile)
     println()
-    return privateProjectsData.render {
+    return privateProjectsData.render { privateProjects ->
         Column(
                 children = listOf(
                         listOf(sectionText(translations.getOrError("otherProjects"))),
-                        it.projects.mapIndexed { index, it ->
+                        privateProjects.projects.mapIndexed { index, it ->
                             Padding(child =
                             Column(children = listOf(
                                     Text(it.title, font = defaultBoldFont),
@@ -39,7 +39,7 @@ fun privateProjectsSection(metadata: CVMeta): Node {
                                             weights = (0..it.skills.size - 2)
                                                     .map { 0.075f } + (1f - 0.075f * (it.skills.size - 2))
                                     ),
-                                    Text(it.description, font = defaultFont),
+                                    MarkdownRenderer(it.description),
                                     Text(it.repositoryUrl, font = captionFont)
                             )),
                                     padding = Dimensions(top = if (index > 0) 16f else 0f)

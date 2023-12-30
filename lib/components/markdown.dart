@@ -1,6 +1,6 @@
 import 'package:jaspr/html.dart';
+import 'package:markdown/markdown.dart' as md;
 
-// TODO: use actually valid markdown parser
 class MarkdownComponent extends StatelessComponent {
   final String markdown;
 
@@ -8,36 +8,25 @@ class MarkdownComponent extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    final blocks = markdown.split('\n');
-    yield* parseMarkdown(blocks);
+    final document = md.Document(encodeHtml: true);
+
+    final node = document.parse(markdown);
+    yield* node.map(_convertNode);
   }
 }
 
-Iterable<Component> parseMarkdown(List<String> input) sync* {
-  List<Component>? lastULElements;
-
-  for (var i = 0; i < input.length; i++) {
-    final line = input[i];
-    if (line.startsWith(' *')) {
-      lastULElements ??= [];
-
-      lastULElements.add(li([
-        span([text(line.substring(2))])
-      ]));
-    } else {
-      if (lastULElements != null) {
-        yield ul(
-          lastULElements,
-        );
-        lastULElements = null;
-      }
-      yield p([text(line)]);
-    }
+Component _convertNode(md.Node n) {
+  if (n is md.Element) {
+    return _convertElement(n);
   }
-  if (lastULElements != null) {
-    yield ul(
-      lastULElements,
-    );
-    lastULElements = null;
+  if (n is md.Text) {
+    return text(n.text);
   }
+  return text('Unknown node: $n');
+}
+
+Component _convertElement(md.Element n) {
+  final childrenComponents = n.children?.map(_convertNode).toList() ?? [];
+  return DomComponent(
+      tag: n.tag, children: childrenComponents, attributes: n.attributes);
 }

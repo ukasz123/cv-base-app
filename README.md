@@ -13,6 +13,12 @@ Open Sources:
 ### Private data
 Add `web/private/data` folder with the same structure as `web/public/data`. All entries are optional.
 
+## cvPDFGenerator subproject
+Kotlin PDF generator
+
+#### Requireements
+ - Java JDK 21
+ - Gradle 8.3
 
 #### Obsolete (Kotlin) README.md part
 

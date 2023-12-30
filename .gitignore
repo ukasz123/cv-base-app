@@ -5,7 +5,9 @@
 # Conventional directory for build output.
 build/
 node_modules
-cvPdfGenerator/.gradle
 *.freezed.dart
 *.g.dart
+cvPdfGenerator/.gradle
+cvPdfGenerator/.idea/**
 cvPdfGenerator/bin
+cvPdfGenerator/local.properties

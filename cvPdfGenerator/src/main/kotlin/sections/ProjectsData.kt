@@ -2,6 +2,7 @@ package sections
 
 import CVMeta
 import pl.ukaszapps.itext.nodes.*
+import pl.ukaszapps.markdown.MarkdownRenderer
 import sections.common.*
 import java.io.File
 
@@ -41,7 +42,7 @@ fun projectsSection(metadata: CVMeta): Node {
                   children = listOf(
                           Column(children = listOfNotNull(
                                   Text(description?.title ?: name, font = defaultBoldFont),
-                                  description?.let { defaultText(it.description) }
+                                  description?.let { description1 -> MarkdownRenderer(description1.description) }
                           ) +
                               (description?.urls?.map {
                                 listOf(

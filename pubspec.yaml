@@ -11,7 +11,8 @@ dependencies:
   jaspr: ^0.9.3
   jaspr_riverpod: ^0.3.8
   json_annotation: ^4.8.0
-
+  markdown: ^7.1.1
+  
 dependency_overrides:
 
 dev_dependencies:
